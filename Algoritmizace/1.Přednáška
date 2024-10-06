@@ -1,0 +1,12 @@
+while existuje nezadaný muž:
+m = první nezadaný muž
+ž = první nevyškrtnutá žena na seznamu muže m
+if ž nezadaná : ž se zasnoubí s m
+else: # ž je již zasnoubena
+    s = snoubenec ž
+     ž preferuje s před m: # nápadník m dostane košem
+vyškrtni ž ze seznamu muže m
+else: # snoubenec s dostane košem
+        vyškrtni ž ze seznamu muže s
+    ž se zasnoubí s m
+
