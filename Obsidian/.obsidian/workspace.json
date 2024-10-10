@@ -8,11 +8,15 @@
         "type": "tabs",
         "children": [
           {
-            "id": "8bfb7b1b1057fa70",
+            "id": "b7e226227c3d3001",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Diskrétní matika/Relace.md",
+                "mode": "preview",
+                "source": true
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Diskrétní matika/Relace.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Diskrétní matika/Relace.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Diskrétní matika/Relace.md"
+              }
             }
           }
         ]
@@ -138,11 +146,24 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8bfb7b1b1057fa70",
+  "active": "b7e226227c3d3001",
   "lastOpenFiles": [
+    "Diskrétní matika/Matematická indukce.md",
+    "Diskrétní matika/Relace.md",
+    "indukce.md",
+    "Diskrétní matika/indukcí.md",
+    "Algoritmizace/Určení největšího společného dělitele.md",
+    "Diskrétní matika",
+    "Eukleides.md",
+    "Algoritmizace/Asymptotická notace O.md",
+    "Algoritmizace/Testování prvočíselnosti.md",
+    "Algoritmizace/Algoritmy teorie čísel.md",
+    "Úvod do počítačových sítí/Filozofie Vrstev.md",
+    "Úvod do počítačových sítí/2. Přednáška.md",
+    "Algoritmizace",
     "Welcome.md",
     "create a link.md",
-    "Untitled",
+    "Úvod do počítačových sítí",
     "OLLALALA.md"
   ]
 }
