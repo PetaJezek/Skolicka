@@ -1,0 +1,5 @@
+- řecký matematik, 325 - 260 př. n. l
+- Alexandria (Egypt)
+- základy geometrie, teorie čísel
+- Základy / Στοιχεῖα
+	- “nejúspěšnější matematické dílo”, 13 knih

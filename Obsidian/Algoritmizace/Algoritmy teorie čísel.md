@@ -1,0 +1,5 @@
+[[Testování prvočíselnosti]]
+[[Určení největšího společného dělitele]]
+[[Výpočet hodnoty polynomu]]
+[[Převody mezi číselnými soustavami]]
+[[Rychlé umocňování]]
