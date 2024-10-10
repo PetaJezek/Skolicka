@@ -11,8 +11,12 @@
             "id": "8bfb7b1b1057fa70",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "OWL/Diskrétka 2.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "OWL/Diskrétka 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "OWL/Diskrétka 2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "OWL/Diskrétka 2.md"
+              }
             }
           }
         ]
@@ -141,8 +149,9 @@
   "active": "8bfb7b1b1057fa70",
   "lastOpenFiles": [
     "Welcome.md",
+    "OWL/Diskrétka 2.md",
+    "OWL",
     "create a link.md",
-    "Untitled",
     "OLLALALA.md"
   ]
 }

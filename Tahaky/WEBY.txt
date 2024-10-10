@@ -1,6 +1,7 @@
 DISKRÉTKA: http://mj.ucw.cz/vyuka/2425/dm/
 
 LINGEBRA: https://kam.mff.cuni.cz/~hladik/LA/
+cvika: https://kam.mff.cuni.cz/~lorenc/teach/24-25/LA/mo1540.html
 
 PYTHON: https://ksvi.mff.cuni.cz/~holan/#Knizky
 
