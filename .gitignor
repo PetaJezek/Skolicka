@@ -1,0 +1,6 @@
+# Ignore Obsidian workspace and config files
+.obsidian/workspace
+.obsidian/workspace.json
+.obsidian/cache
+.obsidian/app.json
+.obsidian/plugins/*
