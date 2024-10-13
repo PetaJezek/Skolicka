@@ -1,19 +1,37 @@
 {
   "main": {
-    "id": "7893675c7d79a1d7",
+    "id": "ef135c2790bc5725",
     "type": "split",
     "children": [
       {
-        "id": "663283c3af7c4810",
+        "id": "912de3d9165c9894",
         "type": "tabs",
         "children": [
           {
-            "id": "b7e226227c3d3001",
+            "id": "1dd5abe1687b24b0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Diskrétní matika/Relace.md",
+                "file": "OWL/Diskrétka 2.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "47453e1594a62baf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a576625ca5bf50a6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "OWL/Diskrétka 2.md",
                 "mode": "preview",
                 "source": true
               }
@@ -25,15 +43,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "fd7e2b5ccfa9ba73",
+    "id": "bcaaedc8f4a44480",
     "type": "split",
     "children": [
       {
-        "id": "d8dba723b4a5b783",
+        "id": "78d2ddd2eba22d53",
         "type": "tabs",
         "children": [
           {
-            "id": "af683b68e12d002b",
+            "id": "a04481ff5070d316",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,7 +61,7 @@
             }
           },
           {
-            "id": "48cf3d614e82758e",
+            "id": "c0fa2cd2ac2d62be",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -58,7 +76,7 @@
             }
           },
           {
-            "id": "5452a40c37f40968",
+            "id": "a9713104afea3df7",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -72,20 +90,20 @@
     "width": 300
   },
   "right": {
-    "id": "f93a6462bb67eb6d",
+    "id": "d806343c9905ceb4",
     "type": "split",
     "children": [
       {
-        "id": "af05c53e4b240afc",
+        "id": "806c7924135424a3",
         "type": "tabs",
         "children": [
           {
-            "id": "8f2d44d66d21469a",
+            "id": "34c771abb33f4e48",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Diskrétní matika/Relace.md",
+                "file": "OWL/Diskrétka 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,19 +115,19 @@
             }
           },
           {
-            "id": "d8b8959bcabaae04",
+            "id": "5833ee7568628b2b",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Diskrétní matika/Relace.md",
+                "file": "OWL/Diskrétka 2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "779b00ba467d3a69",
+            "id": "059b730b639dc36a",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -120,12 +138,12 @@
             }
           },
           {
-            "id": "6ccd1c2c4cc854b6",
+            "id": "bba3850974cff32e",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Diskrétní matika/Relace.md"
+                "file": "OWL/Diskrétka 2.md"
               }
             }
           }
@@ -146,26 +164,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b7e226227c3d3001",
+  "active": "a576625ca5bf50a6",
   "lastOpenFiles": [
-    "Diskrétní matika/Matematická indukce.md",
-    "Diskrétní matika/Relace.md",
-    "indukce.md",
-    "Diskrétní matika/indukcí.md",
-    "Algoritmizace/Určení největšího společného dělitele.md",
-    "Diskrétní matika",
+    "Matika/Algoritmizace/Testování prvočíselnosti.md",
+    "Složitost.md",
+    "Matika",
+    "Matika/Algoritmizace/Určení největšího společného dělitele.md",
+    "Matika/Algoritmizace/Algoritmy teorie čísel.md",
+    "Matika/Algoritmizace/Asymptotická notace O.md",
     "Eukleides.md",
-    "Algoritmizace/Asymptotická notace O.md",
-    "Algoritmizace/Testování prvočíselnosti.md",
-    "Algoritmizace/Algoritmy teorie čísel.md",
-    "Úvod do počítačových sítí/Filozofie Vrstev.md",
-    "Úvod do počítačových sítí/2. Přednáška.md",
-    "Algoritmizace",
-    "Welcome.md",
-    "OWL/Diskrétka 2.md",
-    "OWL",
-    "create a link.md",
-    "Úvod do počítačových sítí",
-    "OLLALALA.md"
+    "indukce.md",
+    "Matika/Diskrétní matika/Matematická indukce.md",
+    "Matika/Diskrétní matika/Relace.md",
+    "OWL/Diskrétka 2.md"
   ]
 }
