@@ -1,0 +1,46 @@
+Napište výsledné hodnoty následujících posunů – výsledek zapište ve stejné soustavě (dvojková nebo
+šestnáctková) v jaké je zapsán levý operand operace posunu. Dodržte uvedenou přesnost operace:
+8-bitový posun: 00101110 SHL 5 -> 11000000
+8-bitový posun: 00101110 SHL 16 -> 00000000
+8-bitový posun: 0x1C SHL 4 -> 0xC0
+32-bitový posun: 0x00017000 SHL 3 -> 0xB8000
+32-bitový posun: 0x84ACFF09 SHL 8 -> ACFF0900
+32-bitový posun: 0x84ACFF09 SHL 12 -> CFF09000
+8-bitový posun: 10101110 SHR 5 -> 101
+8-bitový posun: 10101110 SHR 7 -> 1
+8-bitový posun: 00101111 SHR 7 -> 0
+32-bitový posun: 0x84ACFF09 SHR 8 -> 84ACFF
+32-bitový posun: 0x84ACFF09 SHR 12 -> 84ACF
+
+
+
+Pro následující hodnoty napište jejich reprezentaci jako znaménkové číslo (a) s explicitním znaménkovým bitem,
+(b) v jedničkovém doplňku, (c) ve dvojkovém doplňku. Po každou hodnotu napište všechny 3 varianty její
+reprezentace, a výsledek vždy zapište jako 8-bitovou hodnotu ve dvojkové soustavě:
+10 =  00001010, 00001010, 00001010
+0  =  00000000, 11111111, 00000000
+-3 =  10000011, 11111100, 11111101
+-5 =  10000101, 11111010, 11111011
+-124 =11111100, 10000011, 10000100
+
+
+8) Předpokládejte následující fragmenty Python programů využívajících modul numpy. Pokud bychom po každém
+z těchto fragmentů provedli v programu příkaz print(cislo, type(cislo)), tak co by v uvedených příkladech
+vypsal?
+a): cislo = 5
+5 int
+
+b): cislo = 256
+256 int
+c): cislo = 0x4FE
+1278 int
+d): cislo = 251
+cislo = uint8(cislo)
+11111011 uint8
+
+e): cislo = 256
+cislo = uint8(cislo)
+00000000 uint8
+f): cislo = 0x4FE
+cislo = uint8(cislo)
+010011111110 uint8
