@@ -1,0 +1,41 @@
+
+15) Formát paketu s datem (den/měsíc/rok)
+-------------------------------------------------
+Pokud máme přenášet datum ve formátu den/měsíc/rok a rok potřebujeme v rozmezí 0 až 3000, musíme zvolit vhodný počet bitů pro každý údaj.
+
+- Den (1–31): Den bude potřeba zakódovat pomocí 5 bitů (2^5 = 32), protože potřebujeme 31 možných hodnot.
+- Měsíc (1–12): Měsíc zakódujeme pomocí 4 bitů (2^4 = 16), protože měsíců máme 12.
+- Rok (0–3000): Pro roky od 0 do 3000 budeme potřebovat 12 bitů (2^12 = 4096), abychom mohli reprezentovat 3001 hodnot (3000 - 0 + 1).
+
+Celková velikost takového paketu bude: 5 bitů pro den, 4 bity pro měsíc, 12 bitů pro rok, takže dohromady **21 bitů**.
+
+Jelikož jsou pakety po 8 bitech, musíme zaokrouhlit nahoru na celé bajty. Tedy 21 bitů nám zabere **3 bajty** (24 bitů).
+
+16) Formát paketu s aktuálním časem (milisekundy od půlnoci)
+-------------------------------------------------
+Když chceme přenášet aktuální čas jen pomocí milisekund od půlnoci, musíme nejdřív zjistit, kolik maximálně milisekund je v jednom dni.
+
+- 1 den má 24 hodin.
+- 1 hodina má 60 minut.
+- 1 minuta má 60 sekund.
+- 1 sekunda má 1000 milisekund.
+
+To znamená, že za den projde 86 400 000 milisekund. K zakódování tohoto čísla nám bude stačit **27 bitů** (2^27 = 134 217 728).
+
+Opět platí, že pakety jsou po 8 bitech, takže 27 bitů nám zabere **4 bajty** (32 bitů).
+
+17) Počet RS-232 přenosů
+-------------------------------------------------
+Máme sériovou RS-232 linku s 1 start bitem, 8 datovými bity a 1 stop bitem. To znamená, že na přenos jednoho bajtu potřebujeme 10 bitů.
+
+a) Datumový paket (21 bitů)
+Paket s datem nám zabere 21 bitů, což znamená, že musíme přenést 3 bajty (zaokrouhleno na 24 bitů). Každý bajt zabere 10 bitů, takže:
+- 3 bajty = **3 přenosy** po 10 bitech (30 bitů).
+
+b) Časový paket (27 bitů)
+Paket s časem (milisekundy od půlnoci) zabere 27 bitů, takže potřebujeme 4 bajty (zaokrouhleno na 32 bitů). Každý bajt zabere 10 bitů, takže:
+- 4 bajty = **4 přenosy** po 10 bitech (40 bitů).
+
+Shrnutí:
+- Datumový paket (21 bitů) zabere 3 bajty, tedy **3 přenosy**.
+- Časový paket (27 bitů) zabere 4 bajty, tedy **4 přenosy**.
