@@ -1,4 +1,11 @@
 {
   "showLineNumber": true,
-  "livePreview": false
+  "livePreview": false,
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  }
 }

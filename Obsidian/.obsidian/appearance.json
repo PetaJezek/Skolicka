@@ -1,4 +1,5 @@
 {
   "cssTheme": "Minimal",
-  "accentColor": "#a12fca"
+  "accentColor": "#a12fca",
+  "theme": "system"
 }

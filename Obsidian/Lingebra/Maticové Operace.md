@@ -190,5 +190,44 @@ B = \begin{pmatrix}
 $$
 6. Matice $A \in \mathbb{R}^{n \times n}$ je stochastická (nebo také markovská), pokud její prvky leží v intervalu $[0, 1]$ a součet každého sloupce je 1. Dokažte, že součin stochastických matic je stochastická matice.
 
+Vzorec pro nasobeni matic.
+$$
+c_{ij} = \sum_{k=1}^na_{ik}b_{kj}
+$$
+Násobení matic můžeme taky znázornit/pochopit jako násobení prvků matice A sloupcovými vektory jejichž složení nám dá matici B. Co ale víme o těchto vektorech je, že jejich součet je roven 1. To znamená že každý prvek Je roznásoben závorkou, která má součet jedna.
 
 
+Označíme matici  C jako výsledek násobení matic A a B:
+
+$$
+C = A \cdot B
+$$
+
+Naším cílem je ukázat, že matice C  je také sloupcově stochastická. 
+
+$$
+\sum_{i=1}^n C_{i,j} = 1 \quad \text{pro každý sloupec } j.
+$$
+Teď se podíváme na součet všech prvků v  j -tém sloupci matice C . Tento součet lze vyjádřit jako:
+
+$$
+\sum_{i=1}^n C_{i,j} = \sum_{i=1}^n \sum_{k=1}^n A_{i,k} \cdot B_{k,j}.
+$$
+
+Tady provádíme dvojité sčítání — nejdřív přes index i pro všechny řádky matice C a potom přes index k pro všechny sloupce matice A a odpovídající řádky matice B.
+To se rovná této upravené verzi kde jde jasně vidět, se to rovná jedna
+
+$$ \sum_{i=1}^n C_{i,j} = \sum_{k=1}^n \left( B_{k,j} \cdot \sum_{i=1}^n A_{i,k} \right) $$
+protože,
+$$ \sum_{i=1}^n A_{i,k} = 1 \quad \text{pro každý sloupec } k $$
+
+Dosadíme zpět:
+$$ \sum_{i=1}^n C_{i,j} = \sum_{k=1}^n B_{k,j} \cdot 1 = \sum_{k=1}^n B_{k,j} $$
+A protože B je taky stochastická matice:
+$$ \sum_{k=1}^n B_{k,j} = 1 \quad \text{pro každý sloupec } j. $$
+
+A výsledek je tedy:
+$$ \sum_{i=1}^n C_{i,j} = 1. $$
+
+Což znamená, že součty všech sloupců výsledné matice C se rovnají 1.
+To znamená, že tvrzení platí.
