@@ -4,21 +4,41 @@
     "type": "split",
     "children": [
       {
-        "id": "9873204bc359b8a9",
+        "id": "72278ef492452efa",
         "type": "tabs",
         "children": [
           {
-            "id": "e7ea2c35855977a7",
+            "id": "db7523235069d5a7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lingebra/Maticové Operace.md",
+                "file": "Lingebra/Regular and inverse matrices.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Maticové Operace"
+              "title": "Regular and inverse matrices"
+            }
+          }
+        ]
+      },
+      {
+        "id": "50500873c61e8da6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ed65d6003005c735",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lingebra/Regular and inverse matrices.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Regular and inverse matrices"
             }
           }
         ]
@@ -164,9 +184,10 @@
   },
   "active": "e7ea2c35855977a7",
   "lastOpenFiles": [
-    "Lingebra/Matematická struktura.md",
-    "Složitost.md",
     "Tělesa.md",
+    "Lingebra/Regular and inverse matrices.md",
+    "Lingebra/Matematická struktura.md",
+    "Grupa.md",
     "Lingebra/Maticové Operace.md",
     "Grupa.md",
     "Množina.md",
