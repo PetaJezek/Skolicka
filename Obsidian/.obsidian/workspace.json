@@ -4,41 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "745df03a03fa5210",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "25df8ad856eb2371",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Lingebra/Maticové Operace.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Maticové Operace"
-            }
-          },
-          {
-            "id": "a122be2c502f64bd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Grupa.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Grupa"
-            }
-          }
-        ],
-        "currentTab": 1
-      },
-      {
         "id": "72278ef492452efa",
         "type": "tabs",
         "children": [
@@ -48,12 +13,32 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tělesa.md",
+                "file": "Lingebra/Regular and inverse matrices.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Tělesa"
+              "title": "Regular and inverse matrices"
+            }
+          }
+        ]
+      },
+      {
+        "id": "50500873c61e8da6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ed65d6003005c735",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lingebra/Regular and inverse matrices.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Regular and inverse matrices"
             }
           }
         ]
@@ -199,8 +184,9 @@
   },
   "active": "db7523235069d5a7",
   "lastOpenFiles": [
-    "Lingebra/Matematická struktura.md",
     "Tělesa.md",
+    "Lingebra/Regular and inverse matrices.md",
+    "Lingebra/Matematická struktura.md",
     "Grupa.md",
     "Lingebra/Maticové Operace.md",
     "Množina.md",
