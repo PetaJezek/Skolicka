@@ -4,41 +4,37 @@
     "type": "split",
     "children": [
       {
-        "id": "912de3d9165c9894",
+        "id": "98a180d7d82685b5",
         "type": "tabs",
         "children": [
           {
-            "id": "73f92f41787a5f93",
+            "id": "2164225aa2817bba",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OWL/Diskrétka 3.md",
+                "file": "Lingebra/Maticové Operace.md",
                 "mode": "source",
                 "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Diskrétka 3"
+              }
             }
           }
         ]
       },
       {
-        "id": "98a180d7d82685b5",
+        "id": "745df03a03fa5210",
         "type": "tabs",
         "children": [
           {
-            "id": "93d487f704e59497",
+            "id": "25df8ad856eb2371",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OWL/Diskrétka 3.md",
+                "file": "Lingebra/Maticové Operace.md",
                 "mode": "preview",
                 "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Diskrétka 3"
+              }
             }
           }
         ]
@@ -61,9 +57,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              },
-              "icon": "lucide-folder-closed",
-              "title": "Files"
+              }
             }
           },
           {
@@ -78,9 +72,7 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              },
-              "icon": "lucide-search",
-              "title": "Search"
+              }
             }
           },
           {
@@ -88,9 +80,7 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {},
-              "icon": "lucide-bookmark",
-              "title": "Bookmarks"
+              "state": {}
             }
           }
         ]
@@ -113,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OWL/Lingebra/Matice.md",
+                "file": "Lingebra/Maticové Operace.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,9 +111,7 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              },
-              "icon": "links-coming-in",
-              "title": "Backlinks for Matice"
+              }
             }
           },
           {
@@ -132,12 +120,10 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OWL/Lingebra/Matice.md",
+                "file": "Lingebra/Maticové Operace.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              },
-              "icon": "links-going-out",
-              "title": "Outgoing links from Matice"
+              }
             }
           },
           {
@@ -148,9 +134,7 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              },
-              "icon": "lucide-tags",
-              "title": "Tags"
+              }
             }
           },
           {
@@ -159,10 +143,8 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OWL/Lingebra/Matice.md"
-              },
-              "icon": "lucide-list",
-              "title": "Outline of Matice"
+                "file": "Lingebra/Maticové Operace.md"
+              }
             }
           }
         ]
@@ -182,11 +164,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "93d487f704e59497",
+  "active": "25df8ad856eb2371",
   "lastOpenFiles": [
+    "OWL/Diskrétka 3.md",
+    "Lingebra/Maticové Operace.md",
+    "Lingebra",
     "OWL/Diskrétka 2.md",
-    "OWL/Diskrétka 3.md",
-    "OWL/Diskrétka 3.md",
     "O(n).md",
     "OWL/Lingebra/Matice.md",
     "Matika/Diskrétní matika/Částečná uspořádání.md",
