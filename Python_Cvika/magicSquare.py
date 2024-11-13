@@ -44,10 +44,11 @@ else:
         possible = False
 sumarum = 0
 for i in lists:
+    if sumarum != 0 and sum(i) != sumarum and 0 not in i:
+        possible = False
     if 0 not in i:
         sumarum = sum(i)
-    if sumarum != 0 and sum(i) != sumarum and 0 not in i:
-            possible = False
+    
 
 if possible == True:
     add = 0

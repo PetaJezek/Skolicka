@@ -8,37 +8,37 @@
         "type": "tabs",
         "children": [
           {
-            "id": "db7523235069d5a7",
+            "id": "04543b15381dd31d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lingebra/Regular and inverse matrices.md",
+                "file": "OWL/Diskrétka 4.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Regular and inverse matrices"
+              "title": "Diskrétka 4"
             }
           }
         ]
       },
       {
-        "id": "50500873c61e8da6",
+        "id": "4cc632df01d74627",
         "type": "tabs",
         "children": [
           {
-            "id": "ed65d6003005c735",
+            "id": "3e397628df11cb51",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lingebra/Regular and inverse matrices.md",
+                "file": "OWL/Diskrétka 4.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Regular and inverse matrices"
+              "title": "Diskrétka 4"
             }
           }
         ]
@@ -182,10 +182,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "db7523235069d5a7",
+  "active": "3e397628df11cb51",
   "lastOpenFiles": [
-    "Tělesa.md",
+    "OWL/Diskrétka 3.md",
+    "OWL/Diskrétka 4.md",
+    "OWL/Diskrétka 2.md",
     "Lingebra/Regular and inverse matrices.md",
+    "Tělesa.md",
     "Lingebra/Matematická struktura.md",
     "Grupa.md",
     "Lingebra/Maticové Operace.md",
@@ -193,9 +196,7 @@
     "Množina.md",
     "Matika/Algoritmizace/Algoritmy teorie čísel.md",
     "Matika/Algoritmizace/Testování prvočíselnosti.md",
-    "OWL/Diskrétka 3.md",
     "Lingebra",
-    "OWL/Diskrétka 2.md",
     "O(n).md",
     "OWL/Lingebra/Matice.md",
     "Matika/Diskrétní matika/Částečná uspořádání.md",
