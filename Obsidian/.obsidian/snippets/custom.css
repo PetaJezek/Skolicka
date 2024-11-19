@@ -1,0 +1,148 @@
+/* Global Background for Dark Theme */
+body {
+    background-color: #2e2e2e;  /* Dark background */
+    color: #000000;             /* Pure black text color for everything */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Math Formula Styling */
+.math {
+    color: #f39c12;             /* Golden color for math text */
+    font-size: 1.2em;           /* Larger text size for math */
+    font-family: 'Courier New', monospace; /* Monospace font for better math readability */
+}
+
+/* Brackets and Operators in Math */
+.math span.math-operator,
+.math span.math-bracket {
+    color: #3498db;             /* Blue color for operators and brackets */
+}
+
+/* Highlight Links */
+a {
+    color: #68a0b3;             /* Soft blue for links */
+}
+
+a:hover {
+    color: #a1c4d7;             /* Lighter blue when hovering */
+}
+
+/* Code Block Styling */
+code {
+    background-color: #333;     /* Darker background for inline code */
+    color: #f0f0f0;             /* Light text color for inline code */
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+/* Block-level Code */
+pre {
+    background-color: #262626;  /* Dark background for code blocks */
+    color: #f0f0f0;             /* Light text for code blocks */
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    overflow-x: auto;
+}
+
+/* Headers (H1, H2, H3...) */
+h1, h2, h3, h4, h5, h6 {
+    color: #f39c12;             /* Golden color for headers */
+}
+
+/* Blockquotes */
+blockquote {
+    border-left: 5px solid #68a0b3; /* Blue border for blockquotes */
+    color: #000000;             /* Black text for blockquotes */
+    padding-left: 15px;
+    margin-left: 10px;
+    font-style: italic;
+}
+
+/* Lists (Bulleted/Numbered) */
+ul, ol {
+    color: #000000;             /* Black text for list items */
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #000000;             /* Black text for tables */
+}
+
+th, td {
+    border: 1px solid #444;    /* Dark border for table cells */
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;     /* Dark background for table headers */
+}
+
+/* Links in Preview Mode */
+.markdown-preview-view a {
+    color: #68a0b3;             /* Soft blue for links in preview mode */
+}
+
+/* Emphasis (Italic Text) */
+em {
+    color: #f39c12;             /* Golden color for emphasized text */
+}
+
+/* Strong Text (Bold) */
+strong {
+    color: #e74c3c;             /* Red color for bold text */
+}
+
+/* Strikethrough Text */
+del {
+    color: #7f8c8d;             /* Grey color for strikethrough text */
+}
+
+/* Custom Classes for Highlighted Text */
+.custom-blue {
+    color: #3498db;             /* Custom blue color */
+}
+
+.custom-green {
+    color: #2ecc71;             /* Custom green color */
+}
+
+.custom-orange {
+    color: #e67e22;             /* Custom orange color */
+}
+
+/* Scrollbar customization for dark theme */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #444;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #222;
+}
+
+/* Ensure the background color persists when exporting to PDF */
+@page {
+    background: #2e2e2e;          /* Dark background for exported PDF */
+    color: #000000;               /* Black text color for PDF export */
+}
+
+/* Set links to blue in PDF export as well */
+@media print {
+    a {
+        color: #68a0b3 !important;
+    }
+
+    /* Ensure code blocks are readable in PDF */
+    pre, code {
+        background-color: #262626 !important;
+        color: #f0f0f0 !important;
+    }
+}
