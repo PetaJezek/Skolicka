@@ -8,47 +8,40 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7118ae93e8f0747d",
+            "id": "5559a5bb44bb3c32",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lingebra/Regular and inverse matrices.md",
-                "mode": "preview",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Regular and inverse matrices"
-            }
-          },
-          {
-            "id": "04257654ea0623eb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled.md",
+                "file": "OWL/Diskrétka 6.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Untitled"
-            }
-          },
-          {
-            "id": "de446a79b4199c7d",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.7.6"
-              },
-              "icon": "lucide-file",
-              "title": "Release Notes 1.7.6"
+              "title": "Diskrétka 6"
             }
           }
-        ],
-        "currentTab": 1
+        ]
+      },
+      {
+        "id": "1056e965c215e403",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "80fd51d87172eddd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "OWL/Diskrétka 6.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Diskrétka 6"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -189,13 +182,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "04257654ea0623eb",
+  "active": "80fd51d87172eddd",
   "lastOpenFiles": [
+    "OWL/Diskrétka 5.md",
+    "OWL/Diskrétka 6.md",
+    "OWL/Diskrétka 4.md",
     "Lingebra/Regular and inverse matrices.md",
-    "Untitled.md",
     "Untitled",
     "OWL/Diskrétka 3.md",
-    "OWL/Diskrétka 4.md",
     "OWL/Diskrétka 2.md",
     "Tělesa.md",
     "Lingebra/Matematická struktura.md",

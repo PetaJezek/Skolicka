@@ -2,7 +2,5 @@
   "cssTheme": "Minimal",
   "accentColor": "#a12fca",
   "theme": "obsidian",
-  "enabledCssSnippets": [
-    "custom"
-  ]
+  "enabledCssSnippets": []
 }
