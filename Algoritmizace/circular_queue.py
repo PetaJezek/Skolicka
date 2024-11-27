@@ -1,39 +1,22 @@
 class CircularQueue():
     def __init__(self, size):
         self.array = size * [None]
-        self.head = size//2
+        self.head = 0
         self.tail = self.head
+        self.pocet = 0
     def resize(self):
-        array = [None] * len(self.array) * 2
-        print(f"Resized to " +  str(len(array)) + " elements")
-        if self.head > self.tail:
-            for i in range(self.head, len(self.array)):
-                array[i-self.head] = self.array[i]
-            for i in range(self.tail+1):
-                array[i+len(self.array)-self.head] = self.array[i]
-            self.head = 0
-            self.tail = len(self.array) - 1
-            self.array = array    
-        elif self.head < self.tail:
-            for i in range(self.tail+1):
-                array[i] = self.array[i]
-            self.array = array
-        else: 
-            array[0] = self.array[0]
-            self.array = array
+        new_size = len(self.array) * 2
+        new_array = [None] * new_size
+        print(f"Resized to {new_size} elements")
+        for i in range(self.pocet):
+            new_array[i] = self.array[(self.head + i) % len(self.array)]
+        self.array = new_array
+        self.head = 0
+        self.tail = self.pocet - 1
     def checkIfFull(self):
-        if (self.array).count(None) == 0:
-            if self.head > self.tail:
-                if self.head - self.tail == 1:
-                    return True
-            elif self.head < self.tail and self.head + self.tail == len(self.array)-1:
-                return True
-            elif self.head == self.tail:
-                return True
-        else:
-            return False
+        return (self.tail + 1) % len(self.array) == self.head
     def enqueue(self, n: int):
-        ## DORES PRIDANI PRVKU JINAK VSE V POHO 
+        self.pocet += 1
         if self.array.count(None) == len(self.array):
             self.array[self.head] = n
         else:
@@ -46,6 +29,7 @@ class CircularQueue():
         if self.checkIfFull():
             self.resize()
     def dequeue(self):
+        self.pocet -= 1
         temp = self.array[self.head]
         self.array[self.head] = None
         if self.head == len(self.array)-1:
@@ -54,20 +38,10 @@ class CircularQueue():
             self.head += 1
         return temp
     def count(self) -> int:
-        none_count = 0
-        for i in self.array:
-            if i == None:
-                none_count += 1
-        return len(self.array) - none_count
-    def avg(self):
-        pocet = 0
+        return self.pocet
+    def avg(self): 
         soucet = 0
-        for i in self.array:
-            if i == None:
-                pass
-            else: 
-                pocet += 1
-                soucet += i
-        return soucet / pocet
+        for i in range(self.pocet):
+                soucet += self.array[(self.head + i) % len(self.array)]
+        return soucet / self.pocet
     
-
