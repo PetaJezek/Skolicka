@@ -4,41 +4,41 @@
     "type": "split",
     "children": [
       {
-        "id": "3d3de2a54ba834ed",
+        "id": "6d4b37dddeab8abf",
         "type": "tabs",
         "children": [
           {
-            "id": "5559a5bb44bb3c32",
+            "id": "a4cb1d55a1c59425",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OWL/Diskrétka 6.md",
+                "file": "Lingebra/Groups and Fields.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Diskrétka 6"
+              "title": "Groups and Fields"
             }
           }
         ]
       },
       {
-        "id": "1056e965c215e403",
+        "id": "356995a47251c995",
         "type": "tabs",
         "children": [
           {
-            "id": "80fd51d87172eddd",
+            "id": "378c3a734561f39e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OWL/Diskrétka 6.md",
+                "file": "Lingebra/Groups and Fields.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Diskrétka 6"
+              "title": "Groups and Fields"
             }
           }
         ]
@@ -97,7 +97,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "d806343c9905ceb4",
@@ -182,8 +183,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "80fd51d87172eddd",
+  "active": "a4cb1d55a1c59425",
   "lastOpenFiles": [
+    "Lingebra/Groups and Fields.md",
     "OWL/Diskrétka 5.md",
     "OWL/Diskrétka 6.md",
     "OWL/Diskrétka 4.md",
