@@ -29,7 +29,7 @@ $$
 $$
 [a_{1}+b_{1} + c_{1},a_{2}+b_{2}+ c_{2}] = [a_{1}+b_{1} + c_{1},a_{2}+b_{2}+ c_{2}] 
 $$
-Both sides are equal, which means $(\mathbb{G}, +)$ **satisfies** the association condition.
+Both sides are equal, which means $(\mathbb{IR}, +)$ **satisfies** the association condition.
 
 - **Existence of the neutral element:** $\exists  e\in G  \quad \forall a \in G: e \circ a = a \circ e = a$
 
@@ -45,11 +45,11 @@ and
 $$
 a_{2} + e_{2} = a_{2}
 $$
-Answer for both: $e_{1},e_{2} = 0$. It also satisfies condition $e_{1} \leq e_{2}$  That means  in $(\mathbb{G}, +)$ exists a neutral element for all elements in $(\mathbb{G}, +)$.
+Answer for both: $e_{1},e_{2} = 0$. It also satisfies condition $e_{1} \leq e_{2}$  That means  in $(\mathbb{IR}, +)$ exists a neutral element for all elements in $(\mathbb{IR}, +)$.
 
 
 
-- **Existence of the inverse element**: $\forall a \in \mathbb{G} \quad \exists b \in \mathbb{G}: a \circ b = b \circ a = e$
+- **Existence of the inverse element**: $\forall a \in \mathbb{IR} \quad \exists b \in \mathbb{G}: a \circ b = b \circ a = e$
 
 We have interval $[a_{1},a_{2}]$, where $a_{1} \leq a_{2}$ and an interval $e = [0,0]$.
 We are looking for interval $[b_{1},b_{2}]$, where $b_{1} \leq b_{2} \land b_{1},b_{2} \in \mathbb{R}$ and $[a_{1}+b_{1}, a_{2}+b_{2}]=[0,0]$ 
@@ -63,11 +63,32 @@ $$
 a_{2}+b_{2}=0
 $$
 We get: $$-a_{1} = b_{1} \quad \text{and}\quad -a_{2} = b_{2}.$$
-Since elements of intervals in $(\mathbb{G},+)$ are from a set of real numbers, our equation holds true for all values.
+Since elements of intervals in $(\mathbb{IR},+)$ are from a set of real numbers, our equation holds true for all values.
 
-That means every interval in $(\mathbb{G},+)$ has its own inverse element (interval).
+That means every interval in $(\mathbb{IR},+)$ has its own inverse element (interval).
 
-$(\mathbb{G},+)$ **is a group**, because  all  3 axioms mentioned are true for our structure.
+$(\mathbb{IR},+)$ **is a group**, because  all  3 axioms mentioned are true for our structure.
+
+- **Abel's group**: $\forall a,b \in \mathbb{IR}: a \circ b =b \circ a$
+We get:
+$$
+[a_{1},a_{2}] + [b_{1},b_{2}] = [b_{1},b_{2}]+ [a_{1},a_{2}]
+$$
+$$
+[a_{1}+b_{1},a_{2}+b_{2}] = [b_{1}+a_{1},b_{2}+a_{2}]
+$$
+
+Since addition is commutative, both sides are equal. That means that $(\mathbb{IR},+)$ is a Abel's group.
+
+ii) $(\mathbb{IR},\cdot)$
+- **Association** $\forall a, b, c, \in \mathbb{G}: a \circ(b\circ c) = (a\circ b) \circ c$
+We have intervals: $$[a_{1},a_{2}],[b_{1},b_{2}],[c_{1},c_{2}],$$
+where: $$a_{1} \leq a_{2},\quad b_{1} \leq b_{2},\quad c_{1} \leq c_{2},$$
+Let's substitute to both sides of our equation:
+
+$$
+
+$$
 
 
 
