@@ -4,30 +4,8 @@
     "type": "split",
     "children": [
       {
-        "id": "6d4b37dddeab8abf",
-        "type": "tabs",
-        "dimension": 50.53619302949062,
-        "children": [
-          {
-            "id": "a4cb1d55a1c59425",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Lingebra/Groups and Fields.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Groups and Fields"
-            }
-          }
-        ]
-      },
-      {
         "id": "356995a47251c995",
         "type": "tabs",
-        "dimension": 49.46380697050938,
         "children": [
           {
             "id": "378c3a734561f39e",
@@ -35,12 +13,32 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lingebra/Groups and Fields.md",
+                "file": "OWL/Diskrétka 7.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Diskrétka 7"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cc76f78c17380591",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "525cf6e20e670935",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "OWL/Diskrétka 7.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Groups and Fields"
+              "title": "Diskrétka 7"
             }
           }
         ]
@@ -99,8 +97,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "d806343c9905ceb4",
@@ -185,9 +182,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a4cb1d55a1c59425",
+  "active": "378c3a734561f39e",
   "lastOpenFiles": [
     "Lingebra/Groups and Fields.md",
+    "OWL/Diskrétka 7.md",
     "OWL/Diskrétka 5.md",
     "OWL/Diskrétka 6.md",
     "OWL/Diskrétka 4.md",
