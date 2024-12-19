@@ -13,32 +13,32 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OWL/Diskrétka 7.md",
+                "file": "Lingebra/Vector Spaces.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Diskrétka 7"
+              "title": "Vector Spaces"
             }
           }
         ]
       },
       {
-        "id": "cc76f78c17380591",
+        "id": "8fa6ac12fd1c38b8",
         "type": "tabs",
         "children": [
           {
-            "id": "525cf6e20e670935",
+            "id": "5ac73d11aff75ee0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OWL/Diskrétka 7.md",
+                "file": "Lingebra/Vector Spaces.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Diskrétka 7"
+              "title": "Vector Spaces"
             }
           }
         ]
@@ -182,10 +182,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "378c3a734561f39e",
+  "active": "5ac73d11aff75ee0",
   "lastOpenFiles": [
-    "Lingebra/Groups and Fields.md",
     "OWL/Diskrétka 7.md",
+    "Lingebra/Vector Spaces.md",
+    "Lingebra/Groups and Fields.md",
     "OWL/Diskrétka 5.md",
     "OWL/Diskrétka 6.md",
     "OWL/Diskrétka 4.md",
