@@ -1,0 +1,138 @@
+/* Obecné nastavení */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #363636;
+    color: #333;
+}
+
+h2 + p {
+    color: #dadada;
+}
+/* Hlavička */
+header {
+    background-color: #074f7e;
+    color: #000;
+    padding: 20px 10px;
+    text-align: center;
+}
+#main-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ebee17;
+    margin-bottom: 20px;
+}
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    
+}
+
+nav ul li a:hover {
+    background-color: #ffffff;
+    border-color: #000000;
+    color: #000;
+    
+}
+
+/* Hlavní obsah */
+main {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #a09b9b;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Seznam koníčků */
+.hobbies-list {
+    margin: 10px 0;
+    padding: 1px;
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+
+/* Zápatí */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #074f7e;
+    color: rgb(222, 2, 175);
+    margin-top: 20px;
+}
+
+
+/* Základní styl pro odkazy */
+a {
+    color: #000000; /* Změní barvu na modrou */
+    text-decoration: none; /* Odebere podtržení */
+}
+
+/* Styl odkazu při najetí myší (hover) */
+a:hover {
+    color: #074f7e; /* Změní barvu na červenou při najetí myší */
+    text-decoration: underline; /* Přidá podtržení při najetí myší */
+}
+#links {
+    text-align: center;
+    font-size: 1rem;
+    color: #760606;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;  /* Aby obrázek nevyčníval */
+    height: auto;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse; /* Sjednotí okraje buněk */
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd; /* Světle šedé okraje */
+}
+
+th {
+    background-color: #f2f2f2; /* Světle šedé pozadí pro hlavičku */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Střídání barev řádků (pro lepší čitelnost) */
+}
+
+tbody tr:hover {
+    background-color: #e0e0e0; /* Zvýraznění řádku při najetí myší */
+}
