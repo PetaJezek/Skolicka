@@ -4,41 +4,43 @@
     "type": "split",
     "children": [
       {
-        "id": "356995a47251c995",
+        "id": "5c4f76bd9004ca6f",
         "type": "tabs",
+        "dimension": 47.987616099071204,
         "children": [
           {
-            "id": "378c3a734561f39e",
+            "id": "30f0f9eccf7ef5d5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lingebra/Vector Spaces.md",
+                "file": "Lingebra/Subspaces, Linear Combinations, and Independence.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Vector Spaces"
+              "title": "Subspaces, Linear Combinations, and Independence"
             }
           }
         ]
       },
       {
-        "id": "8fa6ac12fd1c38b8",
+        "id": "b55c71780ab0a821",
         "type": "tabs",
+        "dimension": 52.012383900928796,
         "children": [
           {
-            "id": "5ac73d11aff75ee0",
+            "id": "8b0fd527a6f6a061",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lingebra/Vector Spaces.md",
+                "file": "Lingebra/Subspaces, Linear Combinations, and Independence.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Vector Spaces"
+              "title": "Subspaces, Linear Combinations, and Independence"
             }
           }
         ]
@@ -182,22 +184,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5ac73d11aff75ee0",
+  "active": "30f0f9eccf7ef5d5",
   "lastOpenFiles": [
-    "OWL/Diskrétka 7.md",
     "Lingebra/Vector Spaces.md",
+    "Lingebra/Subspaces, Linear Combinations, and Independence.md",
     "Lingebra/Groups and Fields.md",
+    "Lingebra/Matematická struktura.md",
+    "Lingebra/Maticové Operace.md",
+    "Lingebra/Regular and inverse matrices.md",
+    "OWL/Diskrétka 7.md",
     "OWL/Diskrétka 5.md",
     "OWL/Diskrétka 6.md",
     "OWL/Diskrétka 4.md",
-    "Lingebra/Regular and inverse matrices.md",
     "Untitled",
     "OWL/Diskrétka 3.md",
     "OWL/Diskrétka 2.md",
     "Tělesa.md",
-    "Lingebra/Matematická struktura.md",
     "Grupa.md",
-    "Lingebra/Maticové Operace.md",
     "Grupa.md",
     "Množina.md",
     "Matika/Algoritmizace/Algoritmy teorie čísel.md",
@@ -212,7 +215,6 @@
     "Matika",
     "Matika/Algoritmizace/Určení největšího společného dělitele.md",
     "Matika/Algoritmizace/Asymptotická notace O.md",
-    "Eukleides.md",
-    "indukce.md"
+    "Eukleides.md"
   ]
 }
