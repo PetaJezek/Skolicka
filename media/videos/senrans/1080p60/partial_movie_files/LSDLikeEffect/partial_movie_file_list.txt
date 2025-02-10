@@ -1,4 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:C:/Users/petrj/OneDrive - Univerzita Karlova/Skolicka/media/videos/senrans/1080p60/partial_movie_files/LSDLikeEffect/3529212410_3170660589_3235785673.mp4'
-file 'file:C:/Users/petrj/OneDrive - Univerzita Karlova/Skolicka/media/videos/senrans/1080p60/partial_movie_files/LSDLikeEffect/3040924799_2695897886_2999854142.mp4'
-file 'file:C:/Users/petrj/OneDrive - Univerzita Karlova/Skolicka/media/videos/senrans/1080p60/partial_movie_files/LSDLikeEffect/3040924799_268212125_2873729818.mp4'
