@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Fira_Code';
+    src: url('.//FiraCode-Bold.ttf');
+}
+
+body {
+font-family: Arial, sans-serif; /* Můžete použít jakékoli písmo */
+font-size: 25px; /* Zvětšení písma pro lepší čitelnost */
+line-height: 2; /* Větší mezery mezi řádky pro lepší čitelnost */
+margin-left: 250px; /* Přidání levého okraje */
+margin-right: 250px; /* Přidání pravého okraje */
+background-color: #f9f9f9; /* Světle šedé pozadí */
+color: #333; /* Tmavě šedý text pro lepší kontrast */
+}
+
+blockquote {
+font-style: italic;
+color: gray
+}
+
+
+/* Obecný styl pro code block */
+.codehilite {
+color: #333; /* Tmavě šedý text pro lepší kontrast s bílým pozadím */
+overflow-x: auto;
+margin-left: 40px;
+margin-right: 40px; /* Aby byl kód zarovnaný a nezasahoval do okrajů */
+background-color: #e6e3e3 ; /* Světle šedé pozadí pro kód */
+}
+
+/* Zvýraznění syntaxe */
+.codehilite .k { color: #d73a49; }  /* Klíčová slova (def, return) */
+.codehilite .n { color: black; }  /* Proměnné */
+.codehilite .nf { color: #6f42c1; } /* Názvy funkcí */
+.codehilite .nb { color: #007b85; } /* Built-in funkce (print) */
+.codehilite .s2 { color: #34c747; } /* Stringy */
+.codehilite .p { color: #333; }  /* Interpunkce - závorky, čárky */
+.codehilite .c { color: #6a737d; font-style: italic; } /* Komentáře */
+
+.checkbox {
+    width: 40px;
+    height: 40px;
+    border: 12px solid #ccc;
+    border-radius: 4px;
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+}
+  
+  /* Style when the checkbox is 'checked' (when it has class 'x') */
+  .checkbox.x {
+    background-color: #4caf50; /* Green background for checked */
+    border-color: #4caf50; /* Green border */
+}
+  
+
+ul li .checkbox {
+   
+    font-size: small;
+}

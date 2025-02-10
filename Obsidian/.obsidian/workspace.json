@@ -4,43 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "5c4f76bd9004ca6f",
+        "id": "cd56279e251232f1",
         "type": "tabs",
-        "dimension": 47.987616099071204,
         "children": [
           {
-            "id": "30f0f9eccf7ef5d5",
+            "id": "5a51b5be551f801d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lingebra/Subspaces, Linear Combinations, and Independence.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Subspaces, Linear Combinations, and Independence"
-            }
-          }
-        ]
-      },
-      {
-        "id": "b55c71780ab0a821",
-        "type": "tabs",
-        "dimension": 52.012383900928796,
-        "children": [
-          {
-            "id": "8b0fd527a6f6a061",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Lingebra/Subspaces, Linear Combinations, and Independence.md",
+                "file": "ProjektTester.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Subspaces, Linear Combinations, and Independence"
+              "title": "ProjektTester"
             }
           }
         ]
@@ -62,7 +40,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -184,10 +163,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "30f0f9eccf7ef5d5",
+  "active": "5a51b5be551f801d",
   "lastOpenFiles": [
-    "Lingebra/Vector Spaces.md",
+    "ProjektTester.md",
+    "O(n).md",
     "Lingebra/Subspaces, Linear Combinations, and Independence.md",
+    "Lingebra/Věty ke zkoušce.md",
+    "Lingebra/Vector Spaces.md",
     "Lingebra/Groups and Fields.md",
     "Lingebra/Matematická struktura.md",
     "Lingebra/Maticové Operace.md",
@@ -206,15 +188,12 @@
     "Matika/Algoritmizace/Algoritmy teorie čísel.md",
     "Matika/Algoritmizace/Testování prvočíselnosti.md",
     "Lingebra",
-    "O(n).md",
     "OWL/Lingebra/Matice.md",
     "Matika/Diskrétní matika/Částečná uspořádání.md",
     "OWL/Lingebra",
     "Matika/Diskrétní matika/Relace.md",
     "Matika/Diskrétní matika/Matematická indukce.md",
     "Matika",
-    "Matika/Algoritmizace/Určení největšího společného dělitele.md",
-    "Matika/Algoritmizace/Asymptotická notace O.md",
-    "Eukleides.md"
+    "Matika/Algoritmizace/Určení největšího společného dělitele.md"
   ]
 }
