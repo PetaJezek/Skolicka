@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "cd56279e251232f1",
+        "id": "a16aece8409673e1",
         "type": "tabs",
         "children": [
           {
-            "id": "5a51b5be551f801d",
+            "id": "9271a6b02aa954e6",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -163,10 +163,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5a51b5be551f801d",
+  "active": "9271a6b02aa954e6",
   "lastOpenFiles": [
-    "ProjektTester.md",
     "O(n).md",
+    "Množina.md",
+    "Grupa.md",
+    "ProjektTester.md",
     "Lingebra/Subspaces, Linear Combinations, and Independence.md",
     "Lingebra/Věty ke zkoušce.md",
     "Lingebra/Vector Spaces.md",
@@ -182,9 +184,6 @@
     "OWL/Diskrétka 3.md",
     "OWL/Diskrétka 2.md",
     "Tělesa.md",
-    "Grupa.md",
-    "Grupa.md",
-    "Množina.md",
     "Matika/Algoritmizace/Algoritmy teorie čísel.md",
     "Matika/Algoritmizace/Testování prvočíselnosti.md",
     "Lingebra",

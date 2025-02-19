@@ -35,8 +35,6 @@ void VerticalGraphWithSign(int pole[], int delka) {
 }
 
 int main() {
-  printf("Hello World!\n");
-  int temps[] = {12, 14, 9, 12, 15, 1, 15, 4, 21, 8, 13, 13, 8};
   int delka = sizeof(temps) / sizeof(int);
   HvezdickyZPole(temps, delka);
   printf("Teď to vyhladím!\n");

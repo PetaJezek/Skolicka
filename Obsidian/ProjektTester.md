@@ -1,3 +1,18 @@
+
+## Table of Contents 📝
+- [Introduction](#introduction)
+- [Emojis Galore](#emojis-galore)
+- [Menší nadpis (H3)](#Menší-nadpis-H3)
+
+## Introduction 
+Markdown is an easy way to format text and add some cool elements to your documents! 📝💻 Let's see how emojis can enhance your writing! 😊
+
+## Emojis Galore
+Here are some fun emojis you can use:
+
+
+
+
 # Hlavní nadpis (H1)
 
 ## Podnadpis (H2)
@@ -7,8 +22,6 @@
 #### Nejmenší nadpis (H4)
 
 ---
-#Nefunguje: PRESKRTNUTY TEXT, BLOKOVA CITACE, VNORENE POLOZKY, VICE RADKOVY KOD, ODKAZY, TABULKY, CHECK LIST, KOD
-
 **Toto je tučný text**
 
 *Toto je kurzíva*
@@ -69,6 +82,8 @@ def display_markdown(md_content):
 
 [Odkaz na Youtube](https://www.youtube.com)
 
+
+
 ![Markdown Logo](https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg)
 
 ---
@@ -92,3 +107,5 @@ def display_markdown(md_content):
 ---
 
 Tohle pokrývá téměř všechny možnosti Markdownu! 🚀
+
+

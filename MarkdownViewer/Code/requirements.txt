@@ -1,0 +1,2 @@
+Markdown==3.7
+tkinterweb==3.25.12
