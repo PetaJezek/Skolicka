@@ -135,9 +135,8 @@ html_frame.pack(fill="both", expand=True)
 html_frame.on_link_click(open_link)
 
 #pridani css
-with open('.//Code/abyToByloHezke.css', 'r', encoding='utf-8') as file:
+with open('../Code/abyToByloHezke.css', 'r', encoding='utf-8') as file:
     css = file.read()
 html_frame.add_css(css)
-
 
 root.mainloop()
