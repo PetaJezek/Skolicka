@@ -7,7 +7,6 @@ import markdown
 from markdown.extensions import toc  # například pro generování TOC (Table of Contents)
 from markdown.extensions import Extension
 from markdown.treeprocessors import Treeprocessor
-from markdown.extensions.toc import TocExtension
 import webbrowser
 import unicodedata
 
@@ -102,7 +101,7 @@ def load_markdown():
                     </script>
                 </head>
                 <body>
-                    {html_content}  <!-- Insert the converted HTML content here -->
+                    {html_content}  
                 </body>
             </html>
             """
@@ -135,7 +134,7 @@ html_frame.pack(fill="both", expand=True)
 html_frame.on_link_click(open_link)
 
 #pridani css
-with open('../Code/abyToByloHezke.css', 'r', encoding='utf-8') as file:
+with open('./MarkdownViewer/Code/abyToByloHezke.css', 'r', encoding='utf-8') as file:
     css = file.read()
 html_frame.add_css(css)
 
