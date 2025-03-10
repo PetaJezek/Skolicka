@@ -1,0 +1,3 @@
+aplha 0 : 0 beta
+alpha 2 : 1 gamma
+beta 1 : 1 gamma

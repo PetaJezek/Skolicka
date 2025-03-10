@@ -1,0 +1,4 @@
+bravo,8
+delta,6
+charlie,18
+zulu,256
