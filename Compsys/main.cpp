@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+
+
 void Hvezdicky(int pocet) {
   for (int i = 0; i < pocet; i = i + 2) {
     for (int g = 0; g < (pocet - i) / 2; g++) {

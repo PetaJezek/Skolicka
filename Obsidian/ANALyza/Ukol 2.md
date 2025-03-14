@@ -37,6 +37,8 @@ To znamena ze pro kazde epsilon jsme schopni zvolit n tak, aby vyraz platil. Ted
 
 $$\lim_{ n \to \infty } \frac{n-1}{n+1} = 1$$
 
+Pro epsilon $\epsilon = 2$ bude $n_{0}=2$. Pro libovolné epsilon se bude $n_0 = \left\lceil \frac{2}{\varepsilon} - 1 \right\rceil$.
+
 
 
 
@@ -56,12 +58,38 @@ $$
 
 
 - **b)** $a_n = \cos\left(\frac{n\pi}{4}\right)$
-Jelikož cosinus není prostá funkce, nemá limitu na celém definičním oboru. Má limity na intervalech, ale na to se doufám zadání neptá.
+Jelikož cosinus není prostá funkce, nemá limitu na celém definičním oboru. Má limity na intervalech, ale na to se doufám zadání neptá. Cosinus je periodická funkce a input této funkce je lineární, takže obor hodnot bude interval $<-1;1>$.  S tím, že pokud 
+$$
+a_{n}	\lim_{ n \to \infty }  \cos\left(\frac{n\pi}{4}\right) = 1
+$$
+Pak musí  platit:
+$$
+a_{n+4} \lim_{ n \to \infty }  \cos\left(\frac{(n + 4)\pi}{4}\right) = -1
+$$
+
+**Pokud máme dvě podposloupnosti, které konvergují k jiným hodnotám, pak posloupnost, ze které tyto podposloupnosti jsou, nemá limitu.** 
 
 
-- **c)** $a_n = \log(n)$
+
+
+
+- **c)** $a_n = \log(\sqrt{ n })$
 
 Logaritmus roste pomalu, ale "nekončí", takže jeho má nevlastní limitu $+\infty$
+
+Použijeme mé dřivější tvrzení které se týkalo čistého logaritmu n. 
+
+Posloupnost můžeme rozepsat jako:
+$$
+\log\left( n^\frac{1}{2} \right) = \frac{1}{2}\log n
+$$
+
+Víme že $\lim_{ n \to \infty }\log n=+\infty$
+Řekneme, že funkce $f(n)$ diverguje k $\infty$, pokud pro každé reálné číslo M existuje N, takové že pro všechna $n≥N$ platí:
+$$
+f(n)>M
+$$
+To že nasobime jednou polovinou nic nemeni protože to je konstanta. Takže výsledná limita je nekonečno.
 
 
 

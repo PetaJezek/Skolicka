@@ -3,45 +3,23 @@
 #include "temps.h" // this file defines temperatures[] and no_value constants
 
 //Tisknutí hvězd
-void tisk(int cislo, int min){
-	if(cislo <= 0){
-		for (int i = 0; i < -min + cislo ; i++)
-		{
-			printf(" ");
-		}
-		for (int i = 0; i < -cislo ; i++)
-		{
-			printf("*");
-		}
-		printf("|");
-	}
-	else{
-		for (int i = 0; i < -min; i++)
-		{
-			printf(" ");
-		}
-		printf("|");
-		for (int i = 0; i < cislo ; i++)
-		{
-			printf("*");
-		}
 
-	}
-	printf("\n");
+void tiskHvezd(int cislo, int min){
+	return;
 }
+void tiskMezer(int cislo, int min){
+	return;
+}
+void tisk(int cislo, int min){ 
 
+	for (int i = -min; i < -cislo; i++)
+	{
+		/* code */
+	}
+		
+}
 int najdiMin(const int pole[], int delka){
-	int min;
-
-	if(pole[0] == no_value)
-	{
-		min = 0;
-	}
-	else
-	{
-		min = pole[0];
-	}
-
+	int min = 0;
 	for(int i = 0; i < delka; i++){
 		if(pole[i]!= no_value && pole[i]< min){
 			min = pole[i];
