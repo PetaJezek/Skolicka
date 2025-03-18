@@ -4,41 +4,41 @@
     "type": "split",
     "children": [
       {
-        "id": "4014bff19fdb2a95",
+        "id": "7a3d6edd923008a4",
         "type": "tabs",
         "children": [
           {
-            "id": "b298521322d43b62",
+            "id": "5d3b9c59434ca2d1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ANALyza/Ukol 2.md",
+                "file": "ANALyza/Ukol 3.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Ukol 2"
+              "title": "Ukol 3"
             }
           }
         ]
       },
       {
-        "id": "0a386e9879b299fa",
+        "id": "dfe759da037c2ae2",
         "type": "tabs",
         "children": [
           {
-            "id": "8fc06c69c03263b5",
+            "id": "ff2d23761292817e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ANALyza/Ukol 2.md",
+                "file": "ANALyza/Ukol 3.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Ukol 2"
+              "title": "Ukol 3"
             }
           }
         ]
@@ -183,8 +183,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b298521322d43b62",
+  "active": "5d3b9c59434ca2d1",
   "lastOpenFiles": [
+    "ANALyza/Ukol 3.md",
+    "Lingebra/Determinant.md",
+    "ANALyza/Ukol 2.md",
     "ADS/UKOL 1.md",
     "ADS/Rekurzivní hádanka.md",
     "ANALyza/Ukol 1.md",
@@ -210,10 +213,7 @@
     "Matika/Algoritmizace/Algoritmy teorie čísel.md",
     "Matika/Algoritmizace/Testování prvočíselnosti.md",
     "Lingebra",
-    "OWL/Lingebra/Matice.md",
-    "Matika/Diskrétní matika/Částečná uspořádání.md",
     "OWL/Lingebra",
-    "Matika/Diskrétní matika/Relace.md",
     "Matika"
   ]
 }
