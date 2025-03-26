@@ -1,0 +1,15 @@
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\Telefonni seznam\bin\Debug\net9.0\Telefonni seznam.exe
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\Telefonni seznam\bin\Debug\net9.0\Telefonni seznam.deps.json
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\Telefonni seznam\bin\Debug\net9.0\Telefonni seznam.runtimeconfig.json
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\Telefonni seznam\bin\Debug\net9.0\Telefonni seznam.dll
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\Telefonni seznam\bin\Debug\net9.0\Telefonni seznam.pdb
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\Telefonni seznam\obj\Debug\net9.0\Telefonni seznam.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\Telefonni seznam\obj\Debug\net9.0\Telefonni seznam.AssemblyInfoInputs.cache
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\Telefonni seznam\obj\Debug\net9.0\Telefonni seznam.AssemblyInfo.cs
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\Telefonni seznam\obj\Debug\net9.0\Telefonni seznam.csproj.CoreCompileInputs.cache
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\Telefonni seznam\obj\Debug\net9.0\Telefonni seznam.sourcelink.json
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\Telefonni seznam\obj\Debug\net9.0\Telefonni seznam.dll
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\Telefonni seznam\obj\Debug\net9.0\refint\Telefonni seznam.dll
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\Telefonni seznam\obj\Debug\net9.0\Telefonni seznam.pdb
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\Telefonni seznam\obj\Debug\net9.0\Telefonni seznam.genruntimeconfig.cache
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\Telefonni seznam\obj\Debug\net9.0\ref\Telefonni seznam.dll

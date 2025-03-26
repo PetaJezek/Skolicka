@@ -7,14 +7,7 @@ int pos = 0;
 bool direction = true;
 
 void setup() {
-  pinMode(led1_pin, OUTPUT);
-  pinMode(led2_pin, OUTPUT);
-  pinMode(led3_pin, OUTPUT);
-  pinMode(led4_pin, OUTPUT);
-  digitalWrite(led2_pin, HIGH);
-  digitalWrite(led3_pin, HIGH);
-  digitalWrite(led4_pin, HIGH);
-
+  for(int i; i < ledky_count; )
 }
 void changeLed(){
   digitalWrite(ledky[pos], OFF);
