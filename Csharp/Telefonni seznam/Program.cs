@@ -1,47 +1,120 @@
-﻿namespace Telefonni_seznam
+﻿using System;
+namespace Telefonni_seznam
 {
+    public class Node
+    {
+        public int Data;
+        public Node Next;
+        public Node(int data)
+        {
+            Data = data;
+            Next = null;
+        }
+    }
+    public class LinkedList
+    {
+        private Node head;
+        public void Add(int data)
+        {
+            Node node = new(data);
+            node.Next = head;
+            head = node;
+        }
+        public void Remove(int data)
+        {
+            if (head == null) return;
+            bool found = false;
+            Node current = head;
+            if(head.Data == data)
+            {
+                head = head.Next;
+                return;
+            }
+            while (current.Next != null && found == false)
+            {
+                if(current.Next.Data == data)
+                {
+                    current.Next = current.Next.Next;
+                    found = true;
+                }
+                else
+                {
+                    current = current.Next;
+                }
+                
+
+            }
+        }
+        public void PrintList()
+        {
+            if(head != null)
+            {
+                Node current = head;
+                while (current != null)
+                {
+                    Console.WriteLine(current.Data);
+                    current = current.Next;
+                }
+                
+            }
+            
+        }
+        public void BubbleSort()
+        {
+            if(head == null) { return; }
+            bool prohazovano;
+            do
+            {
+                prohazovano = false;
+                Node current = head;
+                while(current.Next != null)
+                {
+                    if(current.Data < current.Next.Data)
+                    {
+
+                        (current.Data, current.Next.Data) = (current.Next.Data, current.Data);
+                        prohazovano = true;
+                    }
+                    current = current.Next;
+                }
+            }
+            while (prohazovano == true);
+        }
+    }
     class Phonebook
     {
-        public List<int> ints;
+        private LinkedList linkedList = new();
         bool jedem = true;
         public Phonebook()
         {
-
-
-            List<int> ints = new();
-            this.ints = ints;
-
-           
             while (jedem)
             {
-                List<int> input = new();
+                int[] input = [0,0];
+                int i = 0;
                 foreach(string str in Console.ReadLine().Split())
                 {
-                    int a = int.Parse(str);
-                    input.Add(a);
-
+                    input[i] = Convert.ToInt32(str);
+                    i++;
                 }
                 switch (input[0])
                 {
                 
                     case 1:
-                        ints.Add(input[1]);
+                        linkedList.Add(input[1]);
                         break;
                     case 2:
-                        ints.Remove(input[1]);
+                        linkedList.Remove(input[1]);
                         break;
                     case 4:
-                        ints.Sort();
-                        ints.Reverse();
+                        linkedList.BubbleSort();
                         break;
                     case 5:
-                        foreach (int i in ints)
-                        {
-                            Console.WriteLine(i);
-                        }
+                        linkedList.PrintList();
                         break;
                     case 6:
                         jedem = false;
+                        break;
+                    default:
                         break;
                 }
             }
@@ -52,8 +125,6 @@
         static void Main(string[] args)
         {
             Phonebook phonebook = new();
-
-
         }
     }
 }

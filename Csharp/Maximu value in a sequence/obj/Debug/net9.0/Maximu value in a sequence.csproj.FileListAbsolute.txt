@@ -1,0 +1,15 @@
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\Maximu value in a sequence\bin\Debug\net9.0\Maximu value in a sequence.exe
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\Maximu value in a sequence\bin\Debug\net9.0\Maximu value in a sequence.deps.json
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\Maximu value in a sequence\bin\Debug\net9.0\Maximu value in a sequence.runtimeconfig.json
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\Maximu value in a sequence\bin\Debug\net9.0\Maximu value in a sequence.dll
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\Maximu value in a sequence\bin\Debug\net9.0\Maximu value in a sequence.pdb
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\Maximu value in a sequence\obj\Debug\net9.0\Maximu value in a sequence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\Maximu value in a sequence\obj\Debug\net9.0\Maximu value in a sequence.AssemblyInfoInputs.cache
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\Maximu value in a sequence\obj\Debug\net9.0\Maximu value in a sequence.AssemblyInfo.cs
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\Maximu value in a sequence\obj\Debug\net9.0\Maximu value in a sequence.csproj.CoreCompileInputs.cache
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\Maximu value in a sequence\obj\Debug\net9.0\Maximu value in a sequence.sourcelink.json
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\Maximu value in a sequence\obj\Debug\net9.0\Maximu value in a sequence.dll
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\Maximu value in a sequence\obj\Debug\net9.0\refint\Maximu value in a sequence.dll
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\Maximu value in a sequence\obj\Debug\net9.0\Maximu value in a sequence.pdb
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\Maximu value in a sequence\obj\Debug\net9.0\Maximu value in a sequence.genruntimeconfig.cache
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\Maximu value in a sequence\obj\Debug\net9.0\ref\Maximu value in a sequence.dll

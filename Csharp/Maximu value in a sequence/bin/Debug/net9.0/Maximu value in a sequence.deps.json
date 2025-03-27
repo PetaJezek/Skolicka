@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Maximu value in a sequence/1.0.0": {
+        "runtime": {
+          "Maximu value in a sequence.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Maximu value in a sequence/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
