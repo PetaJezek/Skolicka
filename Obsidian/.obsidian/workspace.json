@@ -4,28 +4,9 @@
     "type": "split",
     "children": [
       {
-        "id": "c688c18d5d05d087",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "6987c31921d092fe",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ANALyza/Ukol 4.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Ukol 4"
-            }
-          }
-        ]
-      },
-      {
         "id": "ea017bec48b24a3b",
         "type": "tabs",
+        "dimension": 48.21981424148607,
         "children": [
           {
             "id": "ccd52b6e6f8a367e",
@@ -33,12 +14,33 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ANALyza/Ukol 4.md",
+                "file": "ANALyza/Ukol 5.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Ukol 5"
+            }
+          }
+        ]
+      },
+      {
+        "id": "f32f09b5554d6b1d",
+        "type": "tabs",
+        "dimension": 51.78018575851393,
+        "children": [
+          {
+            "id": "b8bb3536e03d1ac8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ANALyza/Ukol 5.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Ukol 4"
+              "title": "Ukol 5"
             }
           }
         ]
@@ -185,10 +187,12 @@
   },
   "active": "ccd52b6e6f8a367e",
   "lastOpenFiles": [
+    "Lingebra/Cauchy-Schwarz, Gram-Schmidt a ortogonalita (34 bodů).md",
+    "ANALyza/Ukol 5.md",
     "Lingebra/Skalarni soucin.md",
     "Lingebra/Determinant.md",
-    "ANALyza/Ukol 3.md",
     "ANALyza/Ukol 4.md",
+    "ANALyza/Ukol 3.md",
     "ANALyza/Ukol 2.md",
     "ADS/UKOL 1.md",
     "ADS/Rekurzivní hádanka.md",
@@ -210,8 +214,6 @@
     "OWL/Diskrétka 6.md",
     "OWL/Diskrétka 4.md",
     "OWL/Diskrétka 3.md",
-    "OWL/Diskrétka 2.md",
-    "Tělesa.md",
     "Lingebra",
     "OWL/Lingebra",
     "Matika"
