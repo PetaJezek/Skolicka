@@ -1,5 +1,5 @@
 #include "funshield.h"
-constexpr int num_digits = 3;
+constexpr int num_digits = 4;
 
 ///"""
 const byte letterMasks[26] = {
@@ -38,7 +38,7 @@ void displayDigit(byte digit, byte pos) {
     digitalWrite(latch_pin, LOW); 
     shiftOut(data_pin, clock_pin, MSBFIRST, digit);
     Serial.println(pos);
-    shiftOut(data_pin, clock_pin, MSBFIRST, 1 << (num_digits - (int)(pos) ));
+    shiftOut(data_pin, clock_pin, MSBFIRST, 1 << (num_digits - (int)(pos) - 1 ));
     digitalWrite(latch_pin, HIGH); 
 }
 
@@ -53,7 +53,7 @@ void setup() {
 void loop() {
     
     for(int i = 0; i < 1000; i++){
-        displayDigit(letterMasks[5],3);
+        displayDigit(digits[5],3);
         displayDigit(letterMasks[20],2);
         displayDigit(letterMasks[2],1);
         displayDigit(letterMasks[10],0);
