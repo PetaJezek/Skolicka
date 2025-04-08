@@ -84,5 +84,44 @@ $$
 
 d)
 $$
-\lim_{ x \to 0 } \frac{\sqrt[3]{1+x  }-1}{x}  = 
+\lim_{ x \to 0 } \frac{\sqrt[3]{1+x  }-1}{x} 
 $$
+
+Substituce 
+$$
+y = \sqrt[3]{1+x  }; y^3 = 1+x; x = y^3-1
+$$
+
+$$
+\lim_{ x \to 0 } \frac{y-1}{y^3-1} = \lim_{ x \to 0 } \frac{y-1}{(y-1)(y^2+y+1)} = \lim_{ x \to 0 } \frac{1}{y^2+y+1} 
+$$
+
+Pokud $x\to 0\text{ Tak potom : } y \to 1$, protoze $\sqrt[3]{1+0  }=1$. Dosadime zpet:
+
+$$
+\lim_{ x \to 0 } \frac{1}{y^2+y+1} = \lim_{ x \to 0 } \frac{1}{1+1+1} = \frac{1}{3} 
+$$
+
+e)
+
+$$
+\lim_{ \pi \to \frac{\pi}{6} } \frac{2\sin^2x+\sin (x)-1}{2\sin^2(x)-3\sin(x)+1}
+$$
+
+Substituce:
+$$
+y = \sin x; x = \sin^{-1}y
+$$
+
+Dosadime:
+
+$$
+\lim_{ \pi \to \frac{\pi}{6} } \frac{2y^2+y-1}{2y^2-3y+1} = \lim_{ \pi \to \frac{\pi}{6} } \frac{(2y-1)(y+1)}{(2y-1)(y-1)} =\lim_{ \pi \to \frac{\pi}{6} } \frac{y+1}{y-1}   
+$$
+
+Pokud $x\to \frac{\pi}{6}\text{ Tak potom : } y\to \frac{1}{2}$, protoze $\sin \frac{\pi}{6}=\frac{1}{2}$. Dosadime zpet:
+
+$$
+\lim_{ x \to \frac{\pi}{6} } \frac{\frac{1}{2}+1}{\frac{1}{2}-1}= \lim_{ x \to \frac{\pi}{6} } -\frac{\frac{3}{2}}{\frac{1}{2}} = -3 
+$$
+

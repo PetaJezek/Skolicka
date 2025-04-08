@@ -4,43 +4,43 @@
     "type": "split",
     "children": [
       {
-        "id": "ea017bec48b24a3b",
+        "id": "98ed21c3d17be030",
         "type": "tabs",
-        "dimension": 48.21981424148607,
+        "dimension": 47.85202863961814,
         "children": [
           {
-            "id": "ccd52b6e6f8a367e",
+            "id": "b06f11ce9376f601",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ANALyza/Ukol 5.md",
+                "file": "Lingebra/Cauchy-Schwarz, Gram-Schmidt a ortogonalita (34 bodů).md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Ukol 5"
+              "title": "Cauchy-Schwarz, Gram-Schmidt a ortogonalita (34 bodů)"
             }
           }
         ]
       },
       {
-        "id": "f32f09b5554d6b1d",
+        "id": "676348c574c55792",
         "type": "tabs",
-        "dimension": 51.78018575851393,
+        "dimension": 52.14797136038186,
         "children": [
           {
-            "id": "b8bb3536e03d1ac8",
+            "id": "d4fc4e9878252a85",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ANALyza/Ukol 5.md",
+                "file": "Lingebra/Cauchy-Schwarz, Gram-Schmidt a ortogonalita (34 bodů).md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Ukol 5"
+              "title": "Cauchy-Schwarz, Gram-Schmidt a ortogonalita (34 bodů)"
             }
           }
         ]
@@ -185,10 +185,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ccd52b6e6f8a367e",
+  "active": "b06f11ce9376f601",
   "lastOpenFiles": [
-    "Lingebra/Cauchy-Schwarz, Gram-Schmidt a ortogonalita (34 bodů).md",
     "ANALyza/Ukol 5.md",
+    "Lingebra/Cauchy-Schwarz, Gram-Schmidt a ortogonalita (34 bodů).md",
     "Lingebra/Skalarni soucin.md",
     "Lingebra/Determinant.md",
     "ANALyza/Ukol 4.md",
