@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DeleniDlouhehoCisla")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be1d9f94149b537cbcbb601d04e0784fccbaa01f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+63a277653148f9d40016ae087d88dc7ad21454b2")]
 [assembly: System.Reflection.AssemblyProductAttribute("DeleniDlouhehoCisla")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DeleniDlouhehoCisla")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
