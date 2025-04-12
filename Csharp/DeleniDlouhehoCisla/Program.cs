@@ -1,6 +1,4 @@
-﻿using System.Globalization;
-using System.Reflection.Metadata;
-using System.Runtime.InteropServices;
+﻿using System;
 using System.Text;
 
 namespace DeleniDlouhehoCisla
@@ -19,80 +17,106 @@ namespace DeleniDlouhehoCisla
             StringBuilder result = new StringBuilder();
             
             int decimalDigits = 0;
-            int decimalCap = 7;
+            int decimalCap = 6;
             int cur_length;
             string C = "";
             while (A.Length > 0)
             {
-                // extract the first digits that create a number greater than B
+                
                 
                 cur_length = C.Length;
-                
                 while (A.Length > 0)
                 {
-                    //try parse C 
-                    if(int.TryParse(C, out int res) && res >= B)
+                    
+                    if (long.TryParse(C, out long res) && (res >= B || res == 0))
                     {
                         break;
                     }
-             
                     C += A[0];
                     A = A.Remove(0, 1);
-                    cur_length = C.Length;
+
                 }
 
-                int cur = int.Parse(C) / B;
+                long cur = long.Parse(C) / B;
                 result.Append(cur.ToString());
-                int rem = int.Parse(C) - (cur * B);
-                C = rem.ToString();
-
-
+                long rem = long.Parse(C) - (cur * B);
+                if(rem == 0)
+                {
+                    C = "";
+                }
+                else
+                {
+                    C = rem.ToString();
+                }
             }
+            result = new StringBuilder(result.ToString().TrimStart('0'));
+
             
-             result.Append('.');
-            
-            
-            while(int.Parse(C) != 0 && decimalDigits < decimalCap)
+
+            if (result.Length == 0) result.Append("0");
+
+            int decimalDotId = result.Length;
+
+
+
+            while (C != "" && long.Parse(C)!= 0 && decimalDigits < decimalCap + 1)
             {
                 C += '0';
-                int cur = int.Parse(C) / B;
+                long cur = long.Parse(C) / B;
                 result.Append(cur.ToString());
                 decimalDigits++;
-                int rem = int.Parse(C) - (cur * B);
+                long rem = long.Parse(C) - (cur * B);
                 C = rem.ToString();
 
             }
-            while(decimalDigits < decimalCap)
+            while(decimalDigits < decimalCap + 1)
             {
                 result.Append('0');
                 decimalDigits++;
             }
+
             
-            bool carry = false;
-            int id = result.Length - 1;
-            do
+            int roundDigitIndex = result.Length - 1;
+            int roundDigit = result[roundDigitIndex] - '0';
+
+            result.Remove(roundDigitIndex, 1); 
+
+            if (roundDigit >= 5)
             {
-                if(carry == true)
+                int i = roundDigitIndex - 1;
+                while (i >= 0)
                 {
-                    result[id] = (char)(result[id] + 1);
+                    if (result[i] == '.')
+                    {
+                        i--;
+                        continue;
+                    }
+
+                    int digit = result[i] - '0';
+                    if (digit < 9)
+                    {
+                        result[i] = (char)(digit + 1 + '0');
+                        break;
+                    }
+                    else
+                    {
+                        result[i] = '0';
+                        i--;
+                    }
                 }
 
-                if(result[id] == '9')
+                if (i < 0)
                 {
-                    result[id] = '0';
-                    carry = true;
-                    id--;
-                }
-                else
-                {
-                   
-                    carry = false;
+                    result.Insert(0, '1');
+                    decimalDotId++;
                 }
             }
-            while (carry);
 
+           
+            while (result.Length - decimalDotId < 6)
+                result.Append('0');
 
-
+            result.Insert(decimalDotId, '.');
             return result.ToString();
         }
     }
