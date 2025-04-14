@@ -4,26 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "98ed21c3d17be030",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "b06f11ce9376f601",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ANALyza/Ukol 6.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Ukol 6"
-            }
-          }
-        ]
-      },
-      {
         "id": "60710202445f395b",
         "type": "tabs",
         "children": [
@@ -33,12 +13,32 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ANALyza/Ukol 6.md",
+                "file": "ANALyza/Úkol 7.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Úkol 7"
+            }
+          }
+        ]
+      },
+      {
+        "id": "842f8b2ec4714cef",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6e09677cc3dbfa5e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ANALyza/Úkol 7.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Ukol 6"
+              "title": "Úkol 7"
             }
           }
         ]
@@ -185,8 +185,9 @@
   },
   "active": "217f24728d15c7f3",
   "lastOpenFiles": [
-    "Lingebra/Cauchy-Schwarz, Gram-Schmidt a ortogonalita (34 bodů).md",
     "ANALyza/Ukol 6.md",
+    "ANALyza/Úkol 7.md",
+    "Lingebra/Cauchy-Schwarz, Gram-Schmidt a ortogonalita (34 bodů).md",
     "ANALyza/Ukol 5.md",
     "Lingebra/Skalarni soucin.md",
     "Lingebra/Determinant.md",
@@ -211,7 +212,6 @@
     "OWL/Diskrétka 7.md",
     "OWL/Diskrétka 5.md",
     "OWL/Diskrétka 6.md",
-    "OWL/Diskrétka 4.md",
     "Lingebra",
     "OWL/Lingebra",
     "Matika"
