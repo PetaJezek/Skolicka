@@ -49,29 +49,24 @@ void setup() {
     pinMode(data_pin, OUTPUT);
    
 }
+int cifra[4] = {1,5,6,9};
+
+
+
+//
+void removeLeadingZeros(int &num[])
+{
+    bool stop = false; 
+    for
+}
+
+
 
 void loop() {
     
-    for(int i = 0; i < 1000; i++){
-        displayDigit(digits[5],3);
-        displayDigit(letterMasks[20],2);
-        displayDigit(letterMasks[2],1);
-        displayDigit(letterMasks[10],0);
+    for(int i = 0; i < 4; i++){
+        displayDigit(digits[cifra[i]], 3-i);
+        delay(200);
     }
-    displayDigit(0xff, 0);
-    delay(500);
-    for(int i = 0; i < 1000; i++){
-        displayDigit(letterMasks[24],3);
-        displayDigit(letterMasks[14],2);
-        displayDigit(letterMasks[20],1);
-        displayDigit(0b01111101,0);
-    }
-    
-    
-    
-  displayDigit(0xff, 0);
-        delay(500);
-    
-    
-    
+   
 }

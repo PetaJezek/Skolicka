@@ -6,7 +6,8 @@ const int interval = 1000;
 int ledky[4] = {led1_pin, led2_pin, led3_pin, led4_pin};
 constexpr int ledky_count = sizeof(ledky) / sizeof(ledky[0]);
 
-
+int INITIAL_DELAY = 1000;
+int REPEAT_DELAY = 1;
 
 
 
@@ -65,24 +66,20 @@ class Seven_seg{
     for (int i = num_digits - 1; i >= 0; i--) {
         number = number * 10 + displayedNum[i];
     }
-
-    Serial.println(number);
     for(int i = 0; i < cur_digit_displayed;i++){
       scitanec *= 10;
     }
-    
-  Serial.println("----");
-  Serial.println(scitanec);
+
     
     number +=  scitanec;
-    Serial.println(number);
+   
     
     if (number < 0) {
         number += 10000; 
     }
     number = number % 10000; 
 
-    Serial.println(number);
+ 
     for (int i = 0; i < num_digits; i++) {
         displayedNum[i] = number % 10;
         number = number / 10;
@@ -140,5 +137,7 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   controller->checkButtonsPressed();
+  
+  
   
 }
