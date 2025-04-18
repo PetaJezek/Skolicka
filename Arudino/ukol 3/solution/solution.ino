@@ -1,110 +1,94 @@
-  #include "funshield.h"
+#include "funshield.h"
+
+const unsigned long INITIAL_DELAY = 1000;
+const unsigned long REPEAT_DELAY = 300;
+const int MODULO_VALUE = 16;  
 
 
-
-//velmi osklivy kod plny globalnich promennych. Ale nemam tuseni jak se jich zbavit
-//Napisu si tridu pro Button aby to bylo prehlednejsi
-//rozhodne to neni dry kod
-
-
+const int ledky[4] = {led1_pin, led2_pin, led3_pin, led4_pin};
+const int butony_pin[3] = {button1_pin, button2_pin, button3_pin};
+constexpr int ledky_count = sizeof(ledky) / sizeof(ledky[0]);
+constexpr int butony_count = sizeof(butony_pin) / sizeof(butony_pin[0]);
 
 
-  const unsigned long INITIAL_DELAY = 1000;  
-  const unsigned long REPEAT_DELAY = 300; 
-  unsigned long DELAY1;
-  unsigned long DELAY2;
+struct Button {
+  unsigned long lastTime;
+  bool stisknuto;
+  unsigned long delay;
+  int pricitani;
+};
 
 
-  int ledky[4] = {led1_pin, led2_pin, led3_pin, led4_pin};
-  int butony[3] = {button1_pin, button2_pin, button3_pin};
-  constexpr int ledky_count = sizeof(ledky) / sizeof(ledky[0]);
-  constexpr int butony_count = sizeof(butony) / sizeof(butony[0]);
-
-  long start = millis();
-  int pocitadlo = 0;
-  
+int pocitadlo = 0;
 
 
-  unsigned long lastTime1 = 0;
-  bool stisknuto1 = false;
-  unsigned long lastTime2 = 0;
-  bool stisknuto2 = false;
+Button buttons[2] = {
+  {0, false, INITIAL_DELAY, 1},  
+  {0, false, INITIAL_DELAY, MODULO_VALUE - 1}  
+};
 
- void encoder(int v)
-  {
-    
-    for(int i = 0; i < ledky_count; i++)
-    {
-      bool sviti = (v>>i) & 1;
-      digitalWrite(ledky[ledky_count - 1 - i], !sviti);
-    }
+
+void encoder(int v) {
+  for(int i = 0; i < ledky_count; i++) {
+    bool sviti = (v >> i) & 1;
+    digitalWrite(ledky[ledky_count - 1 - i], !sviti);
   }
-void pocitej(int& poc, int pricitani){
-  poc = (poc+ pricitani) % 16;
-  encoder(poc);
 }
-void updateCounter(int pin, unsigned long& lastTime, bool& byloZmacknuto, int pricitano, unsigned long& DELAY){
 
+
+void Pocitej(int pricitani) {
+  pocitadlo = (pocitadlo + pricitani) % MODULO_VALUE;
+  encoder(pocitadlo);
+}
+
+
+bool zpracujTlacitko(int pin, Button& button) {
   unsigned long currentMillis = millis();
-  bool Zmacknuto = (digitalRead(pin) == LOW); //mozna potreba zmenit
+  bool zmacknuto = (digitalRead(pin) == LOW);
+  bool aktivovat = false;
 
-
-  if(Zmacknuto){
-    if(!byloZmacknuto){
-          
-      pocitej(pocitadlo, pricitano);
-      lastTime = currentMillis;
-      byloZmacknuto = true;
-      }
-    else
-    //drzime tlacitko
-    {
-      if(currentMillis - lastTime > DELAY){
-
-        DELAY = REPEAT_DELAY;
-        pocitej(pocitadlo, pricitano);
-        lastTime = currentMillis;
+  if (zmacknuto) {
+    if (!button.stisknuto) {
+     
+      aktivovat = true;
+      button.lastTime = currentMillis;
+      button.stisknuto = true;
+    } else {
+      if (currentMillis - button.lastTime > button.delay) {
+        button.delay = REPEAT_DELAY;
+        aktivovat = true;
+        button.lastTime = currentMillis;
       }
     }
-  }
-  //pustili jsme ho ho
-  else{
-    DELAY = INITIAL_DELAY;
-    byloZmacknuto = false;
-  }
-}  
-  
-  
-
-
-
-
-
-  void setup() 
-  {
-    Serial.begin(9600);
-    DELAY1 = INITIAL_DELAY;
-    DELAY2 = INITIAL_DELAY;
-
-    for(int i = 0; i < butony_count; i++)
-    {
-      pinMode(butony[i], INPUT);
-    }
-    for(int i = 0; i < ledky_count; i++)
-    {
-      pinMode(ledky[i], OUTPUT);
-      digitalWrite(ledky[i], OFF);
-    }
+  } else {
+    
+    button.delay = INITIAL_DELAY;
+    button.stisknuto = false;
   }
 
+  return aktivovat;
+}
+
+void setup() {
  
 
-void loop() 
-{
   
-  updateCounter(butony[0], lastTime1, stisknuto1, 1, DELAY1);
+  for (int i = 0; i < butony_count; i++) {
+    pinMode(butony_pin[i], INPUT);
+  }
+  
+  
+  for (int i = 0; i < ledky_count; i++) {
+    pinMode(ledky[i], OUTPUT);
+    digitalWrite(ledky[i], OFF);
+  }
+}
 
-  updateCounter(butony[1], lastTime2, stisknuto2, 15, DELAY2);
- 
-
+void loop() {
+  
+  for (int i = 0; i < 2; i++) {
+    if (zpracujTlacitko(butony_pin[i], buttons[i])) {
+      Pocitej(buttons[i].pricitani);
+    }
+  }
 }

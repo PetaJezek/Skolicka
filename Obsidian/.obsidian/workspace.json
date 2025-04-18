@@ -4,41 +4,56 @@
     "type": "split",
     "children": [
       {
-        "id": "60710202445f395b",
+        "id": "f519daf2717282ab",
         "type": "tabs",
         "children": [
           {
-            "id": "217f24728d15c7f3",
+            "id": "bcee249708a92538",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ANALyza/Úkol 7.md",
+                "file": "ANALyza/Ukol 6.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Úkol 7"
+              "title": "Ukol 6"
             }
-          }
-        ]
-      },
-      {
-        "id": "842f8b2ec4714cef",
-        "type": "tabs",
-        "children": [
+          },
           {
-            "id": "6e09677cc3dbfa5e",
+            "id": "cfa1ac74464afd10",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ANALyza/Úkol 7.md",
+                "file": "ANALyza/Ukol 7.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Ukol 7"
+            }
+          }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "53910f8ac9341d92",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "425dbfd5331c9b9e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ANALyza/Ukol 7.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Úkol 7"
+              "title": "Ukol 7"
             }
           }
         ]
@@ -183,10 +198,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "217f24728d15c7f3",
+  "active": "425dbfd5331c9b9e",
   "lastOpenFiles": [
     "ANALyza/Ukol 6.md",
-    "ANALyza/Úkol 7.md",
+    "ANALyza/Ukol 7.md",
+    "Lingebra/Ortogonalni matice a doplnek.md",
     "Lingebra/Cauchy-Schwarz, Gram-Schmidt a ortogonalita (34 bodů).md",
     "ANALyza/Ukol 5.md",
     "Lingebra/Skalarni soucin.md",
@@ -211,7 +227,6 @@
     "Lingebra/Regular and inverse matrices.md",
     "OWL/Diskrétka 7.md",
     "OWL/Diskrétka 5.md",
-    "OWL/Diskrétka 6.md",
     "Lingebra",
     "OWL/Lingebra",
     "Matika"
