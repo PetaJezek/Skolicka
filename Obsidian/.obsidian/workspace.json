@@ -4,56 +4,41 @@
     "type": "split",
     "children": [
       {
-        "id": "f519daf2717282ab",
+        "id": "03229dca2199d468",
         "type": "tabs",
         "children": [
           {
-            "id": "bcee249708a92538",
+            "id": "c7954bbb3ad9af85",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ANALyza/Ukol 6.md",
+                "file": "Lingebra/Ortogonalni matice a doplnek.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Ukol 6"
-            }
-          },
-          {
-            "id": "cfa1ac74464afd10",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ANALyza/Ukol 7.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Ukol 7"
+              "title": "Ortogonalni matice a doplnek"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
-        "id": "53910f8ac9341d92",
+        "id": "95a1a9f1b0679cfc",
         "type": "tabs",
         "children": [
           {
-            "id": "425dbfd5331c9b9e",
+            "id": "a7d22e4b710cd02c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ANALyza/Ukol 7.md",
+                "file": "Lingebra/Ortogonalni matice a doplnek.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Ukol 7"
+              "title": "Ortogonalni matice a doplnek"
             }
           }
         ]
@@ -198,14 +183,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "425dbfd5331c9b9e",
+  "active": "c7954bbb3ad9af85",
   "lastOpenFiles": [
-    "ANALyza/Ukol 6.md",
-    "ANALyza/Ukol 7.md",
+    "Pasted image 20250420205108.png",
+    "Untitled",
+    "Lingebra/Skalarni soucin.md",
     "Lingebra/Ortogonalni matice a doplnek.md",
+    "Lingebra/Regular and inverse matrices.md",
+    "Lingebra/Maticové Operace.md",
+    "Lingebra/Matematická struktura.md",
+    "Lingebra/Groups and Fields.md",
+    "ANALyza/Ukol 7.md",
+    "ANALyza/Ukol 6.md",
     "Lingebra/Cauchy-Schwarz, Gram-Schmidt a ortogonalita (34 bodů).md",
     "ANALyza/Ukol 5.md",
-    "Lingebra/Skalarni soucin.md",
     "Lingebra/Determinant.md",
     "ANALyza/Ukol 4.md",
     "ANALyza/Ukol 3.md",
@@ -221,12 +212,7 @@
     "Lingebra/Subspaces, Linear Combinations, and Independence.md",
     "Lingebra/Věty ke zkoušce.md",
     "Lingebra/Vector Spaces.md",
-    "Lingebra/Groups and Fields.md",
-    "Lingebra/Matematická struktura.md",
-    "Lingebra/Maticové Operace.md",
-    "Lingebra/Regular and inverse matrices.md",
     "OWL/Diskrétka 7.md",
-    "OWL/Diskrétka 5.md",
     "Lingebra",
     "OWL/Lingebra",
     "Matika"
