@@ -4,41 +4,41 @@
     "type": "split",
     "children": [
       {
-        "id": "03229dca2199d468",
+        "id": "775154374299fe52",
         "type": "tabs",
         "children": [
           {
-            "id": "c7954bbb3ad9af85",
+            "id": "6a9aa7286259b818",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lingebra/Ortogonalni matice a doplnek.md",
+                "file": "ANALyza/Bonusovy ukol 3.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Ortogonalni matice a doplnek"
+              "title": "Bonusovy ukol 3"
             }
           }
         ]
       },
       {
-        "id": "95a1a9f1b0679cfc",
+        "id": "dafb287d2f47ac04",
         "type": "tabs",
         "children": [
           {
-            "id": "a7d22e4b710cd02c",
+            "id": "50e4b144ea1e0145",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lingebra/Ortogonalni matice a doplnek.md",
+                "file": "ANALyza/Bonusovy ukol 3.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Ortogonalni matice a doplnek"
+              "title": "Bonusovy ukol 3"
             }
           }
         ]
@@ -183,12 +183,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c7954bbb3ad9af85",
+  "active": "6a9aa7286259b818",
   "lastOpenFiles": [
+    "ANALyza/Bonusovy ukol 3.md",
+    "Lingebra/Ortogonalni matice a doplnek.md",
     "Pasted image 20250420205108.png",
     "Untitled",
     "Lingebra/Skalarni soucin.md",
-    "Lingebra/Ortogonalni matice a doplnek.md",
     "Lingebra/Regular and inverse matrices.md",
     "Lingebra/Maticové Operace.md",
     "Lingebra/Matematická struktura.md",
