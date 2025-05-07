@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "IGT56xp7qLM=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\petrj\\OneDrive - Univerzita Karlova\\Skolicka\\Csharp\\Test\\Test.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\petrj\\.nuget\\packages\\microsoft.web.webview2\\1.0.3179.45\\microsoft.web.webview2.1.0.3179.45.nupkg.sha512"
+  ],
+  "logs": []
+}

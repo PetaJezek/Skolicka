@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "nsH33tm9HjI=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\petrj\\OneDrive - Univerzita Karlova\\Skolicka\\Csharp\\REadingPinterest TEST\\REadingPinterest TEST.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\petrj\\.nuget\\packages\\microsoft.web.webview2\\1.0.3179.45\\microsoft.web.webview2.1.0.3179.45.nupkg.sha512"
+  ],
+  "logs": []
+}

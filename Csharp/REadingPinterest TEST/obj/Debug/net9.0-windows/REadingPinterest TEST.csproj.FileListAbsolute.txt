@@ -1,0 +1,6 @@
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\REadingPinterest TEST\obj\Debug\net9.0-windows\REadingPinterest TEST.csproj.AssemblyReference.cache
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\REadingPinterest TEST\obj\Debug\net9.0-windows\REadingPinterest TEST.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\REadingPinterest TEST\obj\Debug\net9.0-windows\REadingPinterest TEST.AssemblyInfoInputs.cache
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\REadingPinterest TEST\obj\Debug\net9.0-windows\REadingPinterest TEST.AssemblyInfo.cs
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\REadingPinterest TEST\obj\Debug\net9.0-windows\REadingPinterest TEST.csproj.CoreCompileInputs.cache
+C:\Users\petrj\OneDrive - Univerzita Karlova\Skolicka\Csharp\REadingPinterest TEST\obj\Debug\net9.0-windows\REadingPinterest TEST.sourcelink.json

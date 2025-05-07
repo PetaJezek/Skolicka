@@ -4,41 +4,41 @@
     "type": "split",
     "children": [
       {
-        "id": "03229dca2199d468",
+        "id": "5105a11cf11e50cd",
         "type": "tabs",
         "children": [
           {
-            "id": "c7954bbb3ad9af85",
+            "id": "110664f115d7d602",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lingebra/Ortogonalni matice a doplnek.md",
+                "file": "ANALyza/Ukol 10.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Ortogonalni matice a doplnek"
+              "title": "Ukol 10"
             }
           }
         ]
       },
       {
-        "id": "95a1a9f1b0679cfc",
+        "id": "72c4794269f70454",
         "type": "tabs",
         "children": [
           {
-            "id": "a7d22e4b710cd02c",
+            "id": "abc99340e14af04d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lingebra/Ortogonalni matice a doplnek.md",
+                "file": "ANALyza/Ukol 10.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Ortogonalni matice a doplnek"
+              "title": "Ukol 10"
             }
           }
         ]
@@ -183,17 +183,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c7954bbb3ad9af85",
+  "active": "110664f115d7d602",
   "lastOpenFiles": [
-    "Pasted image 20250420205108.png",
+    "ANALyza/Ukol 10.md",
+    "ADS/Obchodní cecstující.md",
+    "ADS/BVS Split.md",
+    "ANALyza/Ukol 8.md",
     "Untitled",
-    "Lingebra/Skalarni soucin.md",
+    "ANALyza/Ukol 7.md",
     "Lingebra/Ortogonalni matice a doplnek.md",
+    "Pasted image 20250420205108.png",
+    "Lingebra/Skalarni soucin.md",
     "Lingebra/Regular and inverse matrices.md",
     "Lingebra/Maticové Operace.md",
     "Lingebra/Matematická struktura.md",
     "Lingebra/Groups and Fields.md",
-    "ANALyza/Ukol 7.md",
     "ANALyza/Ukol 6.md",
     "Lingebra/Cauchy-Schwarz, Gram-Schmidt a ortogonalita (34 bodů).md",
     "ANALyza/Ukol 5.md",
@@ -210,9 +214,6 @@
     "Množina.md",
     "Grupa.md",
     "Lingebra/Subspaces, Linear Combinations, and Independence.md",
-    "Lingebra/Věty ke zkoušce.md",
-    "Lingebra/Vector Spaces.md",
-    "OWL/Diskrétka 7.md",
     "Lingebra",
     "OWL/Lingebra",
     "Matika"
