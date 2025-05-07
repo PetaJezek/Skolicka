@@ -1,44 +1,20 @@
 {
   "main": {
-    "id": "ef135c2790bc5725",
+    "id": "ad66b2cf04ae0a8f",
     "type": "split",
     "children": [
       {
-        "id": "5105a11cf11e50cd",
+        "id": "0f019a26d9de1a14",
         "type": "tabs",
         "children": [
           {
-            "id": "110664f115d7d602",
+            "id": "932ed08251f2e2a6",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ANALyza/Ukol 10.md",
-                "mode": "source",
-                "source": true
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Ukol 10"
-            }
-          }
-        ]
-      },
-      {
-        "id": "72c4794269f70454",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "abc99340e14af04d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ANALyza/Ukol 10.md",
-                "mode": "preview",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Ukol 10"
+              "title": "New tab"
             }
           }
         ]
@@ -47,15 +23,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "bcaaedc8f4a44480",
+    "id": "5d9b6d7a72186d8e",
     "type": "split",
     "children": [
       {
-        "id": "78d2ddd2eba22d53",
+        "id": "41d3d5569416d5dd",
         "type": "tabs",
         "children": [
           {
-            "id": "a04481ff5070d316",
+            "id": "1211a76986d3969c",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -68,7 +44,7 @@
             }
           },
           {
-            "id": "c0fa2cd2ac2d62be",
+            "id": "a4ff47872e7d684e",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -85,7 +61,7 @@
             }
           },
           {
-            "id": "a9713104afea3df7",
+            "id": "9052c17c22386cde",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -98,23 +74,22 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 300
   },
   "right": {
-    "id": "d806343c9905ceb4",
+    "id": "df5b57d7b5630b98",
     "type": "split",
     "children": [
       {
-        "id": "806c7924135424a3",
+        "id": "78f6f6cf43c2f577",
         "type": "tabs",
         "children": [
           {
-            "id": "34c771abb33f4e48",
+            "id": "59b83c41479567c9",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lingebra/Maticové Operace.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,46 +99,49 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Maticové Operace"
+              "title": "Backlinks"
             }
           },
           {
-            "id": "5833ee7568628b2b",
+            "id": "f003733b982c8dba",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Lingebra/Maticové Operace.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Maticové Operace"
+              "title": "Outgoing links"
             }
           },
           {
-            "id": "059b730b639dc36a",
+            "id": "f077e312f53c4742",
             "type": "leaf",
             "state": {
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-tags",
               "title": "Tags"
             }
           },
           {
-            "id": "bba3850974cff32e",
+            "id": "48c4e95caaf89877",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Lingebra/Maticové Operace.md"
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Maticové Operace"
+              "title": "Outline"
             }
           }
         ]
@@ -183,39 +161,6 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "110664f115d7d602",
-  "lastOpenFiles": [
-    "ANALyza/Ukol 10.md",
-    "ADS/Obchodní cecstující.md",
-    "ADS/BVS Split.md",
-    "ANALyza/Ukol 8.md",
-    "Untitled",
-    "ANALyza/Ukol 7.md",
-    "Lingebra/Ortogonalni matice a doplnek.md",
-    "Pasted image 20250420205108.png",
-    "Lingebra/Skalarni soucin.md",
-    "Lingebra/Regular and inverse matrices.md",
-    "Lingebra/Maticové Operace.md",
-    "Lingebra/Matematická struktura.md",
-    "Lingebra/Groups and Fields.md",
-    "ANALyza/Ukol 6.md",
-    "Lingebra/Cauchy-Schwarz, Gram-Schmidt a ortogonalita (34 bodů).md",
-    "ANALyza/Ukol 5.md",
-    "Lingebra/Determinant.md",
-    "ANALyza/Ukol 4.md",
-    "ANALyza/Ukol 3.md",
-    "ANALyza/Ukol 2.md",
-    "ADS/UKOL 1.md",
-    "ADS/Rekurzivní hádanka.md",
-    "ANALyza/Ukol 1.md",
-    "ProjektTester.md",
-    "ANALyza",
-    "O(n).md",
-    "Množina.md",
-    "Grupa.md",
-    "Lingebra/Subspaces, Linear Combinations, and Independence.md",
-    "Lingebra",
-    "OWL/Lingebra",
-    "Matika"
-  ]
+  "active": "932ed08251f2e2a6",
+  "lastOpenFiles": []
 }
