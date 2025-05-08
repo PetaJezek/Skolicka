@@ -4,17 +4,41 @@
     "type": "split",
     "children": [
       {
-        "id": "0f019a26d9de1a14",
+        "id": "b68142a0b2c2c232",
         "type": "tabs",
         "children": [
           {
-            "id": "932ed08251f2e2a6",
+            "id": "534d0a72a256d8c2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "ANALyza/Ukol 11.md",
+                "mode": "source",
+                "source": true
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Ukol 11"
+            }
+          }
+        ]
+      },
+      {
+        "id": "68c2c3c4f7d0afda",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "abdf2b23b99d731b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ANALyza/Ukol 11.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Ukol 11"
             }
           }
         ]
@@ -161,6 +185,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "932ed08251f2e2a6",
-  "lastOpenFiles": []
+  "active": "abdf2b23b99d731b",
+  "lastOpenFiles": [
+    "ANALyza/Ukol 10.md",
+    "ANALyza/Ukol 11.md"
+  ]
 }
