@@ -98,7 +98,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "df5b57d7b5630b98",
@@ -185,7 +186,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "abdf2b23b99d731b",
+  "active": "534d0a72a256d8c2",
   "lastOpenFiles": [
     "ANALyza/Ukol 10.md",
     "ANALyza/Ukol 11.md"
