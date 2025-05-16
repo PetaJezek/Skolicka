@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "b68142a0b2c2c232",
+        "id": "3ef46f8e7d87bcd4",
         "type": "tabs",
         "children": [
           {
-            "id": "534d0a72a256d8c2",
+            "id": "b2e7b278c077f6d7",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -24,11 +24,11 @@
         ]
       },
       {
-        "id": "68c2c3c4f7d0afda",
+        "id": "300b783485d93983",
         "type": "tabs",
         "children": [
           {
-            "id": "abdf2b23b99d731b",
+            "id": "ff077d81cda74110",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -98,8 +98,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "df5b57d7b5630b98",
@@ -186,9 +185,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "534d0a72a256d8c2",
+  "active": "b2e7b278c077f6d7",
   "lastOpenFiles": [
-    "ANALyza/Ukol 10.md",
-    "ANALyza/Ukol 11.md"
+    "ANALyza/Ukol 12.md",
+    "ANALyza/Ukol 11.md",
+    "ANALyza/Untitled 1.canvas",
+    "ANALyza/Untitled.canvas",
+    "ANALyza/Ukol 10.md"
   ]
 }
