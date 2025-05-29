@@ -240,6 +240,7 @@ private:
   unsigned long celkovyCas;  // Celkový naměřený čas
   unsigned long zacatek;     // Časový bod spuštění
   unsigned long mezicas;     // Uložený mezičas
+  unsigned long displayValue;
   
 
 
@@ -252,8 +253,10 @@ private:
 
 public:
   // Konstruktor - přijímá reference na displej a tlačítka
-  unsigned long displayValue;
-
+  
+  unsigned long getDisplayValue(){
+    return displayValue;
+  }
   // Inicializace stopek
   void setup(unsigned long cas) {
     stav = Stav::STOJI;
@@ -346,12 +349,12 @@ void loop() {
     bool stisknuto = tlacitka[i].nacti();
     if(stisknuto){
       casovac.zpracuj(ted, i);
-      Serial.print("Zpracovam:");
-      Serial.println(i);
-      Serial.println(casovac.displayValue);
+      // Serial.print("Zpracovam:");
+      // Serial.println(i);
+      // Serial.println(casovac.displayValue);
     }
   }
   casovac.aktualizuj(ted);
-  vypisovac.nastavHodnotu(casovac.displayValue);
+  vypisovac.nastavHodnotu(casovac.getDisplayValue());
   vypisovac.obnov();          // Aktualizace displeje (multiplexování)
 }

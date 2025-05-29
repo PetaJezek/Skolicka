@@ -16,7 +16,7 @@ struct SerialInputHandler
   {
     currentMessage = "";                  // Message being displayed (initialy led by 3 spaces for cooler message entrance effect) 
     //nextMessage = "Chybis mi. Also      Aiko dluzis mi pizzu vole";
-    nextMessage = "umi to cisla 42 i slova PICOVINA";
+    nextMessage = "MATY KOURI PERO SENRANSENRANS";
     readingBuffer = "";    
   }
 

@@ -55,7 +55,7 @@ byte numToGlyph(int i){
 class Display {
 private:
   
-  //static const byte vsechnyPozice = 0b00001111;
+  static const byte vsechnyPozice = 0b00001111;
   //static const byte teckaVzor = 0b01111111;
 
   char view[pocetSegmentu] = {' ', ' ', ' ', ' '};
