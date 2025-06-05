@@ -4,41 +4,41 @@
     "type": "split",
     "children": [
       {
-        "id": "2bc496616597a72f",
+        "id": "2551da7ea47e92c0",
         "type": "tabs",
         "children": [
           {
-            "id": "674b0a66bf971d6f",
+            "id": "8fa742c05d617ff7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ANALyza/Ukol 12.md",
+                "file": "ANALyza/ukol 14.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Ukol 12"
+              "title": "ukol 14"
             }
           }
         ]
       },
       {
-        "id": "dbc3575df52b93f6",
+        "id": "26e1b8e4c0fe56cc",
         "type": "tabs",
         "children": [
           {
-            "id": "344dd3890963234c",
+            "id": "03fc13d618e94ab7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ANALyza/Ukol 12.md",
+                "file": "ANALyza/ukol 14.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Ukol 12"
+              "title": "ukol 14"
             }
           }
         ]
@@ -185,8 +185,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "344dd3890963234c",
+  "active": "8fa742c05d617ff7",
   "lastOpenFiles": [
+    "ANALyza/ukol 14.md",
+    "ADS/Zkouska.md",
     "ANALyza/Ukol 12.md",
     "Lingebra/Podobnost a diagonalizace.md",
     "ANALyza/Ukol 11.md",
