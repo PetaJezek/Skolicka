@@ -1,0 +1,41 @@
+The CPU has two modes: user mode and kernel mode.
+
+The user mode, or application mode, is where most software runs and is used by users or applications to perform tasks. It is a privileged mode, which means it cannot access certain resources directly or perform certain actions without the kernel's assistance.
+
+The kernel mode is a privileged mode that allows full access to the hardware resources. This mode is used by the operating system to manage hardware devices, handle interrupts, and execute privileged instructions. Only code running in kernel mode can access hardware devices or execute privileged instructions.
+
+When an exception occurs, the CPU switches to kernel mode to handle the exception. This privileged switch allows the kernel to access the necessary resources and perform the appropriate actions to handle the exception. Once the exception is handled, the CPU returns to user mode and resumes the interrupted code.
+
+Interrupts are a type of exception that occur when an external event or condition requires immediate attention from the CPU. These interrupts can be triggered by hardware devices or software events and are handled by the interrupt handling mechanism of the CPU. The interrupt handling mechanism includes an interrupt controller, interrupt table, and interrupt handler.
+
+When an interrupt occurs, the CPU saves the current state and switches to kernel mode to handle the interrupt. The interrupt handler communicates with the device or performs the necessary actions to handle the interrupt, updates the kernel structures, and then restores the previously saved state to return the CPU to user mode.
+
+Interrupt handling is crucial for maintaining the integrity of the running code and ensuring that the CPU can respond to external events and user input efficiently. Understanding how interrupts are handled is essential for developing and debugging software that relies on real-time response or interacts with hardware devices.### 6.2 Exception Handling on X86 Architecture
+
+X86 architecture exception handling differs from the generic exception handling described in the previous lecture. It is an important architecture to understand because it is widely used in personal computers and serves as a basis for many other instruction set architectures.
+
+X86 architecture exceptions are divided into two categories: faults and traps. Faults represent hardware exceptions that occur as a result of a hardware error or a faulty instruction. Traps represent software exceptions that occur due to a specific instruction or a breakpoint.
+
+When an exception occurs, the CPU saves the current state, switches to kernel mode, and executes the corresponding exception handler. The exception handler communicates with the hardware, performs the necessary actions, and updates the kernel structures. Finally, the previously saved state is restored to return the CPU to user mode.
+
+In X86 architecture, exceptions are handled using dedicated registers to save the state and an interrupt descriptor table (IDT). The IDT contains the memory locations of the exception handlers for different exception types. The CPU uses the interrupt number associated with the exception to find the corresponding handler in the IDT.
+
+The X86 architecture provides a mechanism for handling nested exceptions. This means that an exception can occur while another exception is already being handled. The CPU maintains a stack of exception records to keep track of the current exception and its context. If a nested exception occurs, the CPU saves the current exception record and handles the new exception. Once the new exception is handled, the CPU restores the previous exception record and resumes the execution from where it left off.
+
+In the X86 architecture, the interrupt 0x80 is used for software interrupts. It allows the user to trigger a specific exception by executing an interrupt instruction with the desired exception code. This is useful for debugging and controlling the execution flow of the code.
+
+Understanding the exception handling mechanisms in the X86 architecture is crucial for developing and debugging software on personal computers. This knowledge helps in troubleshooting hardware errors, handling software exceptions, and managing nested exceptions effectively.### 6.3 Interrupt Handling on X86 Architecture
+
+On the X86 architecture, interrupt handling is performed by the interrupt controller and the interrupt descriptor table (IDT).
+
+The interrupt controller receives the interrupt signal from the device and sends an interrupt request to the CPU through a specific pin. This interrupt request includes the interrupt number, which identifies the device or exception type causing the interrupt.
+
+The interrupt number is used by the CPU to find the corresponding interrupt handler in the interrupt descriptor table (IDT). The IDT is a memory structure that contains the addresses of the exception handlers for different interrupt types.
+
+Once the interrupt handler is located, the CPU switches to kernel mode and saves the current state, including the instruction pointer and registers. The interrupt handler communicates with the device, performs the necessary actions, and updates the kernel structures. Finally, the previously saved state is restored, and the CPU returns to user mode.
+
+The X86 architecture also supports nested interrupts, which occur when an interrupt is handled while another interrupt is already being processed. The CPU maintains a stack of exception records to keep track of the current interrupt and its context. If a nested interrupt occurs, the CPU saves the current exception record and handles the new interrupt. Once the new interrupt is handled, the CPU restores the previous exception record and resumes the execution.
+
+The X86 architecture provides a mechanism for software interrupts using the interrupt 0x80. This allows the user to trigger a specific interrupt by executing an interrupt instruction with the desired interrupt code. This is useful for debugging and controlling the execution flow of the code.
+
+Understanding interrupt handling on the X86 architecture is essential for developing and debugging software that interacts with hardware devices or requires real-time response. This knowledge helps in managing nested interrupts, handling exceptions efficiently, and troubleshooting hardware issues effectively.

@@ -1,0 +1,22 @@
+Lesson 22 - CPU Architecture (Part 3): CPUs, ISAs and Memory Organization - Summary
+---------------------------------------------------------------------------------------
+
+In this lesson, we discussed how CPUs are designed and organized, including:
+
+1. CPU cores and threads:
+	* CPU cores are physical processing units that execute instructions.
+	* Threads are virtual execution units that share a single CPU core.
+	* Hyper-threading enables multiple threads to execute on the same CPU core by using techniques like out-of-order execution and speculative execution.
+
+2. Instruction Set Architectures (ISAs):
+	* ISAs define the instruction set and architecture of a CPU.
+	* There are different types of ISAs, such as RISC and CISC.
+	* ISAs can also be designed with specific approaches, like long instruction word or EPIC (Explicitly Parallel Instruction Computing).
+
+3. Registers and memory organization:
+	* CPUs have a limited number of registers, which can be orthogonal or not orthogonal.
+	* Registers can be mapped to physical registers, such as in X86 architecture, which uses register remapping.
+	* CPUs have caches that prefetch and store data from memory, improving performance.
+	* CPUs can have multiple cores and virtual cores through technologies like hyper-threading.
+
+Next week, we will continue discussing CPUs and explore additional topics related to CPU design and organization.

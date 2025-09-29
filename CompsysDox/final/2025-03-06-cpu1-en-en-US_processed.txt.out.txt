@@ -1,0 +1,6 @@
+What's the difference between registers and memory?
+A register is a small storage space inside a computer's central processing unit (CPU) where data can be quickly and directly accessed by the CPU. It is much faster to access data from a register than from memory, but there are fewer registers available compared to the amount of memory.
+
+Memory, on the other hand, is a larger storage space that can hold a lot of data. It is slower to access than a register, but there are many more memory locations available. Memory is typically organized as a hierarchy, with small, fast registers at the top and larger, slower memory at the bottom. Data is moved between registers and memory as needed during the execution of a program.
+
+In summary, registers are small, fast storage spaces inside the CPU used for quick access to frequently used data, while memory is a larger, slower storage space used to store larger amounts of data that can be accessed by the CPU through registers.

@@ -1,0 +1,13 @@
+Thank you for this informative lecture on operating system introduction and the explanation of system calls. It was very helpful to see the code example and the strace output to understand the specific system calls made during the execution of the program.
+
+Regarding the question on security and reliability:
+
+You mentioned that the application cannot access the kernel memory due to memory protection. However, if an attacker manages to overwrite the system call with their own code and then performs the syscall, they could potentially inject their code into the kernel memory and execute it. This is known as a buffer overflow attack or stack overflow attack.
+
+To prevent this type of attack, there are several security measures in place. One of them is Address Space Layout Randomization (ASLR), which randomly arranges the layout of the memory space where the kernel resides. This makes it difficult for an attacker to determine the exact memory location where the kernel code is located.
+
+Another security measure is Stack Canary, which is a security mechanism that detects buffer overflow attacks. A canary is a special value placed on the stack between function calls. If an attacker overwrites the canary, it is likely that they are attempting a buffer overflow attack. When the canary value is checked and found to be corrupted, the system terminates the program and prevents the attack from succeeding.
+
+In addition to these security measures, modern operating systems use other techniques like sandboxing, privilege separation, and code signing to enhance the security of the system.
+
+It's great to hear that you will find the best time for an extra lecture to cover the remaining material. I'm looking forward to it!

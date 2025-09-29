@@ -1,0 +1,14 @@
+Here are the main points from today's lesson:
+
+- IPC (Inter-Process Communication) is a way for processes to communicate with each other.
+- There are several methods of IPC:
+	+ Pipes: allow processes to read from and write to a shared "pipe"
+	+ Shared memory: allows processes to access the same memory buffer
+	+ Signals: allow one process to send a specific signal to another process, which can then handle it
+- Signals can be used for inter-process communication by creating custom handlers for user-defined signals.
+- Common signals include:
+	+ SIGTERM (sent by the OS to politely ask a process to terminate)
+	+ SIGKILL (cannot be caught or ignored; forcefully terminates a process)
+	+ SIGSEGV (sent when there is a segmentation violation, e.g., accessing an unallocated memory address)
+	+ SIGINT (sent when the user presses Ctrl+C)
+- User signals (SIGUSR1 and SIGUSR2) can be used for custom inter-process communication.
