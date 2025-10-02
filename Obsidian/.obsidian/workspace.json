@@ -4,41 +4,41 @@
     "type": "split",
     "children": [
       {
-        "id": "2551da7ea47e92c0",
+        "id": "0c7591708da5009b",
         "type": "tabs",
         "children": [
           {
-            "id": "8fa742c05d617ff7",
+            "id": "1431c35cbf1d0307",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ANALyza/ukol 14.md",
+                "file": "ANALyza/cvika.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "ukol 14"
+              "title": "cvika"
             }
           }
         ]
       },
       {
-        "id": "26e1b8e4c0fe56cc",
+        "id": "b0069d7fd12e91f8",
         "type": "tabs",
         "children": [
           {
-            "id": "03fc13d618e94ab7",
+            "id": "bf255ff559da40f3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ANALyza/ukol 14.md",
+                "file": "ANALyza/cvika.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "ukol 14"
+              "title": "cvika"
             }
           }
         ]
@@ -185,8 +185,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8fa742c05d617ff7",
+  "active": "1431c35cbf1d0307",
   "lastOpenFiles": [
+    "ANALyza/cvika.md",
     "ANALyza/ukol 14.md",
     "ADS/Zkouska.md",
     "ANALyza/Ukol 12.md",
