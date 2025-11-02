@@ -1,4 +1,5 @@
 [
   "obsidian-latex-suite",
-  "obsidian-pandoc"
+  "obsidian-pandoc",
+  "obsidian-autocomplete-plugin"
 ]

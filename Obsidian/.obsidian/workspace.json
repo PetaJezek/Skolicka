@@ -4,44 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "2551da7ea47e92c0",
+        "id": "fb368488c5cbe59e",
         "type": "tabs",
         "children": [
           {
-            "id": "8fa742c05d617ff7",
+            "id": "72333e72e569bf3f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ANALyza/ukol 14.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "ukol 14"
-            }
-          }
-        ]
-      },
-      {
-        "id": "26e1b8e4c0fe56cc",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "03fc13d618e94ab7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ANALyza/ukol 14.md",
+                "file": "FormAI dokumentace.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "ukol 14"
+              "title": "FormAI dokumentace"
+            }
+          },
+          {
+            "id": "502442a3551fae15",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "FormAI uživatelská dokumentace.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "FormAI uživatelská dokumentace"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -185,8 +180,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8fa742c05d617ff7",
+  "active": "502442a3551fae15",
   "lastOpenFiles": [
+    "FormAI dokumentace.md",
+    "FormAI uživatelská dokumentace.md",
+    "Untitled",
+    "ANALyza/FINAL.md",
+    "Untitled 3.canvas",
+    "Untitled 2.canvas",
+    "Untitled 1.canvas",
+    "Untitled.canvas",
+    "Eukleides.md",
+    "Lingebra/Pozitivní definitnost a bilineární formy.md",
+    "Lingebra/Zkouška.md",
+    "Lingebra/Vlastní čísla, vlastní vektory.md",
+    "ANALyza/Ukol 13.md",
     "ANALyza/ukol 14.md",
     "ADS/Zkouska.md",
     "ANALyza/Ukol 12.md",
