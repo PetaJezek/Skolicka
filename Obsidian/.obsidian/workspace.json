@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "fb368488c5cbe59e",
+        "id": "0c7591708da5009b",
         "type": "tabs",
         "children": [
           {
@@ -37,6 +37,26 @@
           }
         ],
         "currentTab": 1
+      },
+      {
+        "id": "b0069d7fd12e91f8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bf255ff559da40f3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ANALyza/cvika.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "cvika"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -180,10 +200,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "502442a3551fae15",
+  "active": "bf255ff559da40f3",
   "lastOpenFiles": [
     "FormAI dokumentace.md",
     "FormAI uživatelská dokumentace.md",
+    "ANALyza/cvika.md",
     "Untitled",
     "ANALyza/FINAL.md",
     "Untitled 3.canvas",
