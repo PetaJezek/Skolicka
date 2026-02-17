@@ -409,8 +409,531 @@ Princip: Zvýšit strmost hrany (overshoot).
         * Práh $T_2$: Jistá hrana.
         * Práh $T_1$: Možná hrana (bereme jen, když navazuje na jistou hranu).
 
+---
+
+# Image Restoration (Rekonstrukce obrazu)
+
+Na rozdíl od Enhancement (subjektivní vylepšení) se Restoration snaží **objektivně matematicky invertovat degradaci**. Není to heuristika.
+Model degradace: $$g = f * h + n$$
+(Naměřený obraz = Originál * PSF + Šum)
 
 
 
+## 1. Příčiny degradace (Blur)
+* **Camera Shake (Pohyb kamery):** Třes ruky.
+    * Způsobuje cca **95 %** rozmazaných snímků.
+    * PSF = Trajektorie pohybu (světlejší tam, kde se ruka zdržela déle).
+* **Wrong Focus (Špatné zaostření):** Fyzické limity optiky.
+    * Forenzní využití (zaostření až po vyfocení).
+    * PSF = **Kolečko konstantní intenzity** (nebo tvar clony). **NENÍ to Gaussovka!**
+* **Medium Turbulence:** Mlha, voda, atmosféra.
+    * PSF = Gaussovka (rozmazaný flek).
+
+## 2. Modely degradace
+* **Space Invariant:** PSF je všude stejná (např. pohyb celé ploché scény). *Tím se budeme zabývat.*
+* **Space Variant:** PSF se mění pixel od pixelu (např. rotace, různá hloubka scény). Složité.
+
+## 3. Problém inverze a šumu
+I kdybychom znali přesnou PSF ($h$), nemůžeme prostě udělat inverzi ($1/h$), protože v obraze je vždy šum ($n$).
+* Inverze degradace by **invertovala i šum** $\to$ Obrovské zesílení šumu.
+* Úloha je **špatně podmíněná** (Ill-posed problem).
+
+### Metody řešení (když známe PSF)
+1.  **Inverzní Fourier:**
+    * Bez šumu: Funguje perfektně (minimalizuje rozdíl od modelu).
+    * Se šumem: Nepoužitelné (zesílí šum).
+2.  **Wienerův filtr:**
+    * **Statistický přístup.** Minimalizuje střední kvadratickou odchylku (MSE) mezi odhadem a originálem.
+    * Vzorec bere v úvahu **poměr Signál/Šum (SNR)**.
+    * *Vlastnost:* Najde kompromis mezi "odstraněním rozmazání" a "nezvýrazněním šumu".
+
+---
+
+## 4. Blind Deconvolution (Neznámá PSF)
+Co když neznáme masku rozmazání?
+
+### Jak odhadnout PSF?
+1.  **Senzory:** Gyroskop/akcelerometr v telefonu.
+2.  **Experiment:** Vyfocení bodového zdroje (hvězda) $\to$ Obraz hvězdy JE přímo PSF.
+3.  **Ze spektra:** Nulové body ve Fourierově spektru odpovídají tvaru PSF.
+4.  **Z hran:** Analýza profilu hran (rozmazaná hrana napoví tvar filtru).
+
+### Variabilní PSF (Space Variant)
+* Pokud se PSF mění (např. rotace), převedeme souřadnice (polární), aby se pohyb stal lineárním.
+* Nebo rozdělíme obraz na segmenty, kde je PSF cca konstantní.
+
+---
+
+## 5. Pokročilé techniky (Více obrázků)
+
+### Multichannel Restoration
+* Vstup: Více rozmazaných fotek téže scény (s různým rozmazáním).
+* Empirie: Více než **4 obrázky** už moc nepomáhají. Největší skok je mezi 1 a 2.
+* Podmínka: Obrázky musí být perfektně zarovnané (registrované).
+
+### Multifocus Fusion
+* Skládání fotek s různou hloubkou ostrosti (např. mikroskopie).
+* **Princip:** Nepoužívá konvoluci.
+    * Detekuje hrany/gradienty v každém snímku.
+    * Pro každou část složeného obrázku vybere ten snímek, kde je daná oblast nejostřejší.
+
+### Super-resolution
+* Získání vyššího rozlišení z více snímků s nízkým rozlišením.
+* Podmínka: Kamera se musí **pohnout o sub-pixelovou vzdálenost** (mikropohyby).
+* Naivní metoda: Zregistrovat a "proložit" pixely do hustší mřížky.
+* Realistická metoda: Minimalizace funkcionálu s downsampling/upsampling faktorem.
+
+--- 
+# Image Registration (Registrace obrazu)
+
+Proces zarovnání dvou a více obrazů stejné scény do jednoho souřadnicového systému.
+* **Reference image:** Ten, který stojí.
+* **Sensed image:** Ten, který transformujeme na referenční.
+
+---
+
+## 1. Geometrické deformace
+* **Projektivní geometrie:** Zachovává přímky (jmenovatel v rovnici je stejný).
+* **Zkreslení čočky (Lens distortion):**
+    * Barrel (Soudkovité - GoPro).
+    * Pincushion (Poduškovité).
+    * Fish-eye (Rybí oko).
+
+## 2. Postup registrace
+Cíl: Přesnost překrytí (nikoliv odstranění deformace).
+
+1.  **Feature Detection:** Výběr kontrolních bodů (CP).
+2.  **Feature Matching:** Párování bodů.
+3.  **Transform Model Estimation:** Výpočet parametrů deformace.
+4.  **Resampling:** Přepočet obrazu.
+
+---
+
+## 3. Metody matchingu (Párování)
+
+### A. Signal-based (Area-based)
+Nepracuje s body, ale s celými okny pixelů.
+* **Image Correlation:**
+    * Hledá místo s největším korelačním koeficientem.
+    * *Výhody:* Odolné vůči šumu a změně jasu (díky normalizaci). Funguje na satelitních snímcích.
+    * *Nevýhody:* Pomalé. Umí jen posun (Shift).
+* **Phase Correlation (Fázová korelace):**
+    * Pracuje ve Fourierově doméně. Využívá "Whitening" (zahodí amplitudu, nechá jen fázi).
+    * Cross-power spektrum dvou posunutých obrazů je **impulz (Delta funkce)** na místě posunu.
+    * *Výhody:* Extrémně rychlé, robustní vůči jasu (nezajímá ho), zvládá multimodalitu (pokud sedí hrany).
+    * *Trik na rotaci/škálování:* Fourier-Mellin transformace (převedeme amplitudu spektra do Log-Polárních souřadnic $\to$ rotace a scale se změní na posun).
+
+### B. Feature-based
+Hledáme význačné body (rohy, blobs) a párujeme je.
+* Vhodné pro: Multimodální data (MRI vs CT), velké deformace.
+* **Vlastnosti bodů:** Distinktivní, rozprostřené po obraze, invariantní vůči šumu.
+* **Metody párování:**
+    * Kombinatorické (zkoušíme všechny dvojice).
+    * Feature space clustering.
+
+---
+
+## 4. Transformační modely
+Jak moc se může obraz deformovat?
+
+Krok, kdy na základě nalezených dvojic bodů (Matched Points) hledáme matematickou funkci, která převede celý obraz "Sensed" na "Reference".
+
+### 1. Globální modely
+Používáme jednu transformační rovnici pro celý obraz. Předpokládáme, že deformace je všude stejného charakteru.
+
+#### A. Afinní transformace (Affine)
+* **Vlastnosti:**
+    * Zachovává **rovnoběžnost přímek** (Parallelism).
+    * Čtverec $\to$ Kosodélník (Parallelogram).
+    * Operace: Posun (Translation), Rotace, Měřítko (Scale - isotropní i neisotropní), Zkosení (Shear/Skew).
+* **Určení:**
+    * Model má **6 neznámých parametrů**.
+    * Potřebujeme minimálně **3 body** (trojúhelník).
+
+#### B. Projektivní transformace (Projective)
+* **Vlastnosti:**
+    * Zachovává **přímost přímek** (Straight lines), ale **NE rovnoběžnost**.
+    * Čtverec $\to$ Obecný čtyřúhelník (Lichoběžník).
+    * Simuluje perspektivu (sbíhání kolejí) nebo focení plochy pod úhlem (keystone).
+* **Určení:**
+    * Model má **8 neznámých parametrů**.
+    * Potřebujeme minimálně **4 body**.
+
+#### C. Prokládání více body (Fitting)
+Pokud máme více bodů než minimum (přeurčená soustava), body nezahazujeme!
+* **Least-Squares Fit (Metoda nejmenších čtverců):**
+    * Hledáme parametry, které minimalizují součet druhých mocnin chyb (vzdáleností mezi transformovaným bodem a cílem).
+    * **Proč druhé mocniny?** Předpokládáme, že chyby (šum v detekci bodů) mají **Normální (Gaussovské) rozdělení**.
+* **Standard Least Squares:** Předpokládáme chybu jen v jednom obrázku.
+* **Total Least Squares:** Předpokládáme chybu v obou souřadnicích (složitější, méně časté).
+
+---
+
+## 2. Lokální modely (Elastic Registration)
+Používáme, když je deformace komplexní a nelze ji popsat jednou rovnicí (např. měkké tkáně, papír).
+
+### A. Triangulace
+* Obraz rozdělíme na trojúhelníky (vrcholy jsou kontrolní body).
+* Uvnitř každého trojúhelníku použijeme Afinní transformaci.
+* **Problém:** "Lámání" obrazu na hranách trojúhelníků. Není zajištěna hladkost (spojitost derivace).
+
+### B. Thin-Plate Splines (TPS)
+* **Fyzikální model:** Minimalizace ohybové energie tenkého plechu, který je deformován v kontrolních bodech.
+* **Vlastnosti:**
+    * Zaručuje **hladký přechod** (smooth) v celém obraze.
+    * **Globální funkce s lokálním vlivem:** Deformace v jednom bodě ovlivňuje hlavně jeho okolí, vzdálené části zůstávají téměř netknuté.
+
+---
+
+## 5. Resampling (Převzorkování)
+Klíčový krok při aplikaci transformace.
+
+* **Forward Mapping (Špatně):**
+    * Beru pixel ze zdroje a posílám ho do cíle.
+    * *Problém:* Mohou vzniknout **díry** (moiré), pokud cíl zvětšuji.
+* **Backward Mapping (Správně):**
+    * Procházím pixely CÍLOVÉHO obrazu a ptám se: "Kam dopadnu ve zdroji?"
+    * Dopadnu mimo mřížku (neceločíselné souřadnice) $\to$ Použiji **Interpolaci** (Bikubickou, Bilineární).
+    * *Výhoda:* Žádné díry, plná síť.
+
+### Chyby registrace
+1.  **Lokalizační:** Špatně jsem našel bod (roh není přesně na rohu).
+2.  **Matching:** Spojil jsem roh baráku s rohem auta (Nejhorší chyba).
+3.  **Alignment:** Vybral jsem moc jednoduchý model (např. afinní na nelineární deformaci).
 
 
+# Analýza obrazu (Image Analysis)
+
+Zásadní změna oproti preprocessingu:
+* **Vstup:** Obrázek.
+* **Výstup:** Data / Příznaky (už ne obrázek!). Většinou bod v n-rozměrném **příznakovém prostoru** (Feature Space).
+* **Cíl:** Klasifikace, měření, rozpoznávání.
+
+---
+
+## 1. Základní pojmy a Topologie
+
+### 2D Objekt
+* Je **binární** (pixel buď patří objektu [1], nebo pozadí [0]).
+* Je konečný a má okraj.
+
+### Sousednost pixelů (Connectivity)
+Definuje, co považujeme za "jeden objekt".
+* **4-okolí:** Sousedé jen nahoře, dole, vlevo, vpravo.
+* **8-okolí:** Včetně diagonál.
+* **Důsledek (Paradox):** Diagonální řada pixelů.
+    * Ve 4-okolí: Hromada samostatných bodů.
+    * V 8-okolí: Jedna souvislá čára.
+* *Poznámka:* Neexistuje univerzální matematická definice "správné" segmentace. Správnost se určuje jen porovnáním s manuální anotací (Ground Truth).
+
+---
+
+## 2. Segmentace (Jednoduché metody)
+
+Jak dostat z šedotónového obrázku binární objekt?
+
+### A. Prahování (Thresholding)
+Funguje pro scény s jasným kontrastem (např. černý text na bílém papíře).
+* **Problém:** Jak najít optimální práh $T$?
+    * Hledat "dolík mezi dvěma kopci" v histogramu je naivní (šum, nevýrazné kopce).
+* **Řešení (Fisherovo kritérium / Otsu):**
+    * Snažíme se, aby dvě vzniklé skupiny (popředí/pozadí) byly co **nejkompaktnější** (malý rozptyl) a co **nejdále od sebe**.
+    * Optimalizujeme míru separability:
+      $$J = \frac{(m_1 - m_2)^2}{\sigma_1^2 + \sigma_2^2} \rightarrow max$$
+      (Rozdíl průměrů na druhou lomeno součtem rozptylů).
+
+### B. Region Growing (Narůstání oblastí)
+* Algoritmus typu "Floodfill" (plechovka v malování).
+* **Princip:**
+    1.  Zvolíme **Seed bod** (semínko) - manuálně nebo automaticky.
+    2.  Oblast se rozrůstá do sousedů, pokud splňují **podmínku homogenity** (jsou barevně podobní).
+
+---
+
+## 3. Předzpracování binárních dat: Morfologie
+
+Čištění tvarů pomocí **Strukturního elementu ($B$)** (maska, např. kruh nebo čtverec 3x3).
+
+| Operace | Definice | Efekt na objekt |
+| :--- | :--- | :--- |
+| **Eroze** ($\ominus$) | Element musí být *celý* uvnitř. | **Zmenšuje objekt.** "Ohlodává" okraje. Odstraní malé výstupky a šum. |
+| **Dilatace** ($\oplus$) | Stačí průnik elementu s objektem. | **Zvětšuje objekt.** "Nafukuje" okraje. Zaplní malé díry uvnitř. |
+| **Otevření** (Opening) | Eroze $\to$ Dilatace | Odstraní tenké vyčuhující čáry ("chlupy") a drobný šum, ale **zachová velikost** objektu. |
+| **Uzavření** (Closing) | Dilatace $\to$ Eroze | Slepí úzké praskliny a uzavře malé díry uvnitř objektu. |
+
+---
+
+## 4. Příznaky a Invariance (Feature Extraction)
+
+Hledáme funkcionál (popis) $I$, který je **invariantní** vůči deformacím $D$ (posun, rotace, scale).
+$$I(D(f)) = I(f)$$
+
+### Jednoduché geometrické příznaky
+* **Kompaktnost (Circularity):** $\frac{Obvod^2}{Obsah}$. (Kruh = 1, složité tvary > 1).
+* **Konvexnost:** Poměr obsahu objektu a jeho konvexního obalu (gumička natažená okolo).
+* **Elongation:** Poměr stran opsaného obdélníku (Čtverec = 1).
+
+### Shape Vector (Tvarový vektor)
+* **Princip:** Z těžiště vyšleme paprsek a měříme vzdálenost k okraji při rotaci o 360° (**Radiální funkce**).
+* **Omezení:** Funguje **POUZE pro hvězdicové objekty** (paprsek protne okraj právě jednou).
+* **Invariance:**
+    * Převedeme 2D tvar na 1D signál (graf vzdálenosti v závislosti na úhlu).
+    * Rotace objektu = Cyklický posun v grafu.
+    * Měřítko objektu = Změna amplitudy grafu.
+
+### Shape Matrix
+* Vzorkování objektu do polární mřížky.
+* **Výhoda:** Funguje i pro **ne-hvězdicové** objekty (spirály atd.).
+* **Nevýhoda:** Složité řešení rotace (museli bychom rotovat celou matici).
+
+---
+
+## 5. Fourierovy deskriptory (Klíčové téma!)
+
+Popis hranice objektu pomocí Fourierovy transformace.
+1.  Souřadnice okraje $(x,y)$ bereme jako komplexní čísla $z = x + iy$.
+2.  Získáme posloupnost $z_0, z_1, \dots, z_N$.
+3.  Uděláme Fourierku $\to$ Koeficienty $Z_0, Z_1, \dots, Z_{n-1}$.
+
+**Jak zajistit invarianci? (Algoritmus pro zkoušku):**
+
+1.  **Posun (Translation):**
+    * Posun objektu je přičtení konstanty ke všem bodům.
+    * Ve spektru to změní jen nultý člen (DC složku).
+    * **Řešení:** Zahodíme $Z_0$. Používáme $Z_1 \dots Z_{n-1}$.
+2.  **Rotace (Rotation):**
+    * Rotace o úhel $\alpha$ je v komplexní rovině násobení $e^{-i\alpha}$.
+    * To mění fázi, ale ne velikost.
+    * **Řešení:** Bereme absolutní hodnotu (modul) $|Z_n|$.
+3.  **Měřítko (Scale):**
+    * Zvětšení objektu $k$-krát násobí všechny koeficienty $k$.
+    * **Řešení:** Normalizujeme vydělením prvním koeficientem. Výsledek: $\frac{|Z_n|}{|Z_1|}$.
+4.  **Startovní bod (Starting point):**
+    * Kde na hranici začneme měřit?
+    * Změna startu je posun v čase $\to$ změna fáze.
+    * **Řešení:** Stejné jako u rotace. Absolutní hodnota (amplituda spektra) je na posun v čase necitlivá.
+
+---
+
+## 6. Další transformace a Lokální příznaky
+
+### Radonova transformace
+* Projekce obrazu (sčítání sloupců) pod různými úhly natočení.
+* Převádí rotaci obrazu na posun v Radonově prostoru.
+
+### Curvature Scale Space (CSS)
+* Sleduje **inflexní body** (změna konkávní $\leftrightarrow$ konvexní) při postupném vyhlazování hranice (Low-pass filtrací).
+* **Výhoda:** Je to **Lokální** příznak. Pokud se změní jen kus objektu, změní se jen část příznaku (na rozdíl od Fouriera, který se rozsype celý).
+* Invariantní vůči afinní transformaci.
+
+### SIFT (Scale Invariant Feature Transform)
+Nejznámější lokální příznak pro šedotónové obrázky. Robustní vůči zákrytu.
+
+1.  **Detekce bodů:** Hledá extrémy v "Scale Space" (rozdíl Gaussovek - DoG). Najde "fleky" různých velikostí.
+2.  **Filtrace:** Zahodí body na hranách (málo kontrastní), nechá rohy a průsečíky.
+3.  **Deskriptor (HoG):**
+    * V okolí bodu (4x4 pod-okna) spočítá gradienty.
+    * Udělá **Histogram Gradientů (HoG)** - směry hran.
+    * Celý histogram orotuje podle dominantního směru (tím zajistí rotační invarianci).
+* **Výhoda:** Funguje, i když vidíme jen půlku objektu.
+* **Nevýhoda:** Selže při rozmazání (Blur) nebo silném šumu.
+
+### Momentové invarianty (Moments)
+* Projekce obrázku na polynomiální bázi (např. $x^p y^q$).
+* Extrémně matematicky propracované.
+* **Nevýhoda:** Jsou **globální**. Potřebují vidět celý objekt. Nejsou tak robustní v praxi jako SIFT.
+
+# Rozpoznávání a Klasifikace (Recognition)
+
+Poslední fáze zpracování obrazu.
+* **Vstup:** Vektor příznaků (z předchozí fáze analýzy).
+* **Výstup:** Rozhodnutí / Třída (např. "Je to pes").
+
+### Princip klasifikace
+Cílem je rozdělit příznakový prostor na **přihrádky (regiony)**.
+* **Pravidlo:** Jedna přihrádka nesmí odpovídat více třídám. (Ale jedna třída může být rozprostřena do více přihrádek).
+* **Trénování:** Proces hledání a nastavování hranic mezi těmito přihrádkami.
+
+---
+
+## 1. Původ příznaků (Handcrafted vs. Learned)
+
+### Handcrafted (Ručně navržené)
+* **Definice:** Uživatel (expert) pevně definuje, co se bude měřit (např. "změř kulatost a spočítej Fourierovy koeficienty").
+* **Kdy použít:** Pokud jsme schopni rozdíly mezi třídami **matematicky popsat**.
+* **Výhoda:** Jsou rychlejší a často přesnější pro specifické, dobře definované úlohy.
+
+### Learned (Naučené - Deep Learning)
+* **Definice:** Síť si sama optimalizuje prostor příznaků. Vymýšlí si vlastní "filtry" (konvoluční jádra).
+* **Kdy použít:** Pro generické třídy, které **nejsme schopni popsat rovnicí** (např. rozdíl mezi kočkou a psem).
+* **Poznámka:** V moderním CV dominantní přístup.
+
+---
+
+## 2. Typy učení
+
+1.  **Supervised (S učitelem):**
+    * Třídy jsou předem definované.
+    * Trénovací data mají štítky (Labels) $\to$ víme, co je správně.
+2.  **Unsupervised (Bez učitele / Clustering):**
+    * Třídy nejsou známé.
+    * Algoritmus sám hledá shluky (clustery) podobných dat.
+
+### ⚠️ Empirická pozorování (Reality Check)
+* **Hranice nejsou ostré:** Rozhodovací hranice není v reálných datech jednoznačně daná.
+* **Overtraining (Přeučení):** Snaha o 100% oddělení trénovacích množin je chyba.
+    * Pokud se klasifikátor snaží vyhovět každému bodu (i šumu), "přeučí se" a na nových datech selže.
+* **Chyba je nevyhnutelná:** Data nejsou vždy klasifikovatelná správně.
+
+---
+
+## 3. Proces rozhodování (Teorie)
+
+Nerozhodujeme jen "podle citu", ale minimalizujeme matematické riziko.
+
+1.  **Měření:** Získáme příznaky.
+2.  **Klasifikace (Minimalizace chyby):**
+    * Počítáme pravděpodobnost třídy.
+    * **Apriorní pravděpodobnost (Priors):** Musíme zohlednit četnost výskytu tříd v realitě (např. "nemoc je vzácná"). Tuto konstantu odhadujeme z trénovací množiny.
+3.  **Rozhodnutí (Minimalizace ztrátové funkce):**
+    * Vážíme chyby podle jejich závažnosti (Loss function).
+    * *Příklad:* Označit bombu jako kufr je horší chyba, než označit kufr jako bombu.
+4.  **Akce:** HW výstup.
+
+---
+
+## 4. Klasifikátory
+
+Dělíme je podle toho, zda používají pravděpodobnostní rozdělení dat.
+
+### A. Deterministické (Geometrické)
+Používáme, když **máme málo trénovacích dat** a nemůžeme spolehlivě odhadnout parametry rozdělení (např. Gaussovky).
+* *Problém dimenze:* Počet parametrů normální distribuce roste kvadraticky s dimenzí ($N^2$). Málo dat v $N$-D prostoru = špatný statistický model.
+
+#### 1. Minimum Distance (K těžišti)
+* Spočítá se těžiště (mean) každé třídy. Bod se přiřadí k nejbližšímu těžišti.
+* **Nevýhoda:** Špatně se přizpůsobuje tvaru množin (předpokládá koule).
+
+#### 2. Nearest Neighbor (NN - 1-NN)
+* Bod se přiřadí ke třídě svého **nejbližšího souseda**.
+* **Nevýhoda:** Citlivé na **Outliers**. Jeden zašuměný bod hluboko v cizím území vytvoří kolem sebe "ostrůvek chyby".
+
+#### 3. k-NN (k-Nearest Neighbors)
+* Hledá $k$ nejbližších sousedů a hlasuje. Postupně rozšiřuje okolí, dokud nenajde $k$ bodů.
+* **Parametr $k$:**
+    * Je to uživatelský parametr (heustika).
+    * **Malé $k$:** Citlivé na šum.
+    * **Velké $k$:** Vyhlazuje hranici (odolné vůči šumu, ale může setřít detaily).
+    * *Příklad:* $k=2$ zvládne 1 outlier, $k=3$ zvládne 2 outliery atd.
+
+
+
+#### 4. Lineární klasifikátor (SVM - Support Vector Machine)
+* Snaží se najít nadrovinu (čáru), která odděluje třídy s co největším odstupem.
+* **Margin:** Vzdálenost hranice od nejbližších bodů. SVM maximalizuje margin.
+* **Support Vectors:** Body, o které se hranice "opírá".
+* **Soft Margin:** Řešení pro data, která nelze lineárně oddělit (nebo obsahují šum).
+    * Maximalizujeme margin + **Penalizační člen** (pokuta za body na špatné straně).
+
+
+
+#### B. Statistické (Bayes)
+##### Bayesův klasifikátor 
+
+V rozpoznávání se považuje za **statistický "Gold Standard"**.
+Pokud máme dostatek dat a známe jejich rozdělení, matematicky **neexistuje přesnější klasifikátor** (má minimální teoretickou chybu).
+
+* **Rozdíl oproti geometrickým (k-NN, SVM):** Nepočítá vzdálenosti v prostoru, ale **pravděpodobnosti**.
+* **Princip:** Pro naměřený objekt vybereme tu třídu, která je **nejpravděpodobnější**.
+
+---
+
+### 1. Bayesovo pravidlo (The Formula)
+
+Základní vzorec, který otáčí podmíněnou pravděpodobnost.
+
+$$P(\omega_j | \mathbf{x}) = \frac{p(\mathbf{x} | \omega_j) \cdot P(\omega_j)}{p(\mathbf{x})}$$
+
+### Vysvětlení členů (Slovníček)
+
+1.  **$P(\omega_j | \mathbf{x})$ – A posteriori pravděpodobnost (Posterior)**
+    * **TO, CO HLEDÁME.**
+    * *"Jaká je pravděpodobnost, že to je **Třída J** (např. Pes), když jsem naměřil **Data X** (např. velké uši)?"*
+    * Cílem klasifikace je najít třídu $\omega_j$, pro kterou je toto číslo největší.
+
+2.  **$p(\mathbf{x} | \omega_j)$ – Věrohodnost (Likelihood / Class-conditional density)**
+    * **TO, CO SE UČÍME Z DAT.**
+    * *"Jaká je pravděpodobnost, že naměřím **Data X** (velké uši), pokud vím, že to je **Pes**?"*
+    * Tohle nám říká tvar "kopce" (histogramu) trénovacích dat pro danou třídu.
+
+3.  **$P(\omega_j)$ – A priori pravděpodobnost (Prior)**
+    * **NAŠE ZKUŠENOST / KONTEXT.**
+    * *"Jaká je pravděpodobnost výskytu **Psa** obecně?"*
+    * Pokud jsi v psím útulku, je vysoká. Pokud v oceánu, je nulová. Funguje jako "váha" (pokud je nějaká třída vzácná, Bayes ji bude méně tipovat).
+
+4.  **$p(\mathbf{x})$ – Evidence (Total probability)**
+    * Pravděpodobnost výskytu znaku X obecně.
+    * Pro porovnávání tříd (Pes vs. Kočka) je to jen konstanta (stejná pro oba). **Můžeme ji ignorovat.**
+
+---
+
+### 2. Rozhodovací pravidla (Jak vybrat vítěze?)
+
+### A. Pravidlo minimální chyby (Minimum Error Rate)
+Používáme, pokud jsou všechny chyby "stejně drahé".
+* **Akce:** Vyber třídu s nejvyšší a posteriori pravděpodobností $P(\omega_j | \mathbf{x})$.
+* Tím minimalizujeme počet špatných rozhodnutí.
+
+### B. Pravidlo minimálního rizika (Minimum Risk)
+Používáme, pokud mají chyby různou váhu (např. v medicíně).
+* Zavádíme **Ztrátovou funkci (Loss Function) $\lambda_{ij}$**: *"Cena za to, že řeknu třídu $i$, ale pravda je $j$."*
+* **Akce:** Vybereme třídu, která má nejmenší celkové **Riziko** (očekávanou ztrátu).
+* *Příklad:* Raději označíme zdravého člověka za nemocného (malá ztráta, jde na test), než nemocného za zdravého (velká ztráta, smrt).
+
+---
+
+### 3. Bayes a Normální rozdělení (Parametrický přístup)
+
+Abychom mohli použít vzorec, musíme znát člen **$p(\mathbf{x} | \omega_j)$** (Věrohodnost).
+Nejčastěji předpokládáme, že data mají **Gaussovo (Normální) rozdělení**.
+
+Třídu pak popíšeme jen dvěma parametry:
+1.  **Střední hodnota ($\mu$):** Kde je střed třídy (těžiště).
+2.  **Kovarianční matice ($\Sigma$):** Jaký má třída tvar a natočení.
+
+### Co je Kovarianční matice ($\Sigma$)?
+Je to "návod na tvar" té Gaussovy bubliny v N-dimenzionálním prostoru.
+
+* **Diagonála matice (Rozptyly):** Říká, jak je bublina **tlustá** ve směru os (X, Y...).
+* **Mimo diagonálu (Kovariance):** Říká, jak je bublina **natočená/šikmá**.
+    * Pokud jsou kovariance nula $\to$ Třída má tvar koule nebo elipsy srovnané s osami.
+    * Pokud jsou nenulové $\to$ Třída je "šikmá" (existuje závislost mezi příznaky).
+
+#### Diskriminační funkce
+Když dosadíme Gaussovku do Bayesova vzorce a zlogaritmujeme to (aby zmizela exponenciála), získáme **kvadratické rovnice**.
+* Hranice mezi třídami nejsou rovné čáry, ale křivky (paraboly, hyperboly, elipsy).
+* To umožňuje Bayesovi perfektně obalit data různých tvarů.
+
+---
+
+## 4. Problémy v praxi (Proč to nepoužíváme vždy?)
+
+Aby Bayes fungoval, musíme přesně spočítat parametry ($\mu, \Sigma$) z trénovacích dat.
+
+1.  **Problém dimenze:** Počet parametrů v Kovarianční matici roste kvadraticky s počtem příznaků ($N^2$).
+2.  **Nedostatek dat:** Pokud máme málo obrázků a hodně příznaků, **nedokážeme Kovarianční matici spočítat** (bude singulární/nepřesná).
+    * *Důsledek:* Bayesův klasifikátor selže ("nejsme schopni fitovat distribuci").
+    * *Řešení:* Musíme použít jednodušší metody (např. Naive Bayes - předpokládáme, že kovariance je nula, nebo geometrické klasifikátory).
+
+---
+
+## 5. Konvoluční sítě (CNN) - Limity
+
+V kontextu analýzy obrazu je chápeme jako metodu, která si "sama tvoří třídy/příznaky" (unsupervised/learned features část).
+
+* **Problém s invariancí:**
+    * Klasické CNN **nejsou** invariantní vůči rotaci a deformaci.
+    * *Příklad:* Rotace objektu o 30° může snížit pravděpodobnost správné klasifikace z 95 % na 50 % (úroveň náhody).
+* **Řešení:**
+    1.  **Data Augmentation:** Trénovat i na otočených datech.
+    2.  **Equivariant Networks:** Hybridní sítě navržené tak, aby rotaci zvládaly matematicky.
