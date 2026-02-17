@@ -4,20 +4,33 @@
     "type": "split",
     "children": [
       {
+<<<<<<< HEAD
         "id": "135c7b4d808d31e6",
         "type": "tabs",
         "children": [
           {
             "id": "ae4a3d057c0349a5",
+=======
+        "id": "16402c22cc9a37af",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "17512df1351854de",
+>>>>>>> a6fddf281b139817f5ef9480620f7a5f03785066
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
+<<<<<<< HEAD
                 "file": "ImageProcessing/Image Processing.md",
+=======
+                "file": "VaP Logika/POJMY KE ZKOUŠce.md",
+>>>>>>> a6fddf281b139817f5ef9480620f7a5f03785066
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
+<<<<<<< HEAD
               "title": "Image Processing"
             }
           },
@@ -37,6 +50,12 @@
           }
         ],
         "currentTab": 1
+=======
+              "title": "POJMY KE ZKOUŠce"
+            }
+          }
+        ]
+>>>>>>> a6fddf281b139817f5ef9480620f7a5f03785066
       }
     ],
     "direction": "vertical"
@@ -181,10 +200,13 @@
       "bases:Create new base": false
     }
   },
-  "active": "d64d163071781923",
+  "active": "17512df1351854de",
   "lastOpenFiles": [
-    "ImageProcessing/Image Processing.md",
+    "VaP Logika/POJMY KE ZKOUŠce.md",
+    "VaP Logika",
+    "ADS/ADS2 Zkouška.md",
     "ImageProcessing/Image Processing absrrakt nebo neco idk dulezite veci..md",
+    "ImageProcessing/Image Processing.md",
     "ADS/Zkouska.md",
     "ImageProcessing",
     "ADS/Barveni grafu na SAT.md",

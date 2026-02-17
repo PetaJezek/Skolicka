@@ -4,6 +4,8 @@
 ./Obsidian/obsidian/cache
 ./Obsidian/obsidian/app.json
 ./Obsidian/obsidian/plugins/*
+Obsidian/.obsidian/workspace.json
+
 
 .fake
 
