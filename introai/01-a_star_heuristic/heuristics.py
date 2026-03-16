@@ -12,25 +12,35 @@ def distance_in_each_coordinate(x, y):
     return [ abs(a-b) for (a,b) in zip(x, y) ]
 
 def grid_2D_heuristic(current, destination):
-    return 0
+    dx, dy = distance_in_each_coordinate(current, destination)
+    return dx + dy
 
 def grid_diagonal_2D_heuristic(current, destination):
-    return 0
+    dx, dy = distance_in_each_coordinate(current, destination)
+    return max(dx, dy)
 
 def grid_3D_heuristic(current, destination):
-    return 0
+    dx, dy, dz = distance_in_each_coordinate(current, destination)
+    return dx + dy + dz
 
 def grid_face_diagonal_3D_heuristic(current, destination):
-    return 0
+    dx, dy, dz = distance_in_each_coordinate(current, destination)
+    return max(max(dx, dy, dz), math.ceil((dx + dy + dz) / 2))
 
 def grid_all_diagonal_3D_heuristic(current, destination):
-    return 0
+    dx, dy, dz = distance_in_each_coordinate(current, destination)
+    return max(dx, dy, dz)
 
-def grid_great_king_2D_heuristic(current, destination):
-    return 0
+def grid_great_king_2D_heuristic(current, destination): 
+    dx, dy = distance_in_each_coordinate(current, destination)
+    return math.ceil(max(dx, dy) / 8)
 
 def grid_rook_2D_heuristic(current, destination):
-    return 0
+    dx, dy = distance_in_each_coordinate(current, destination)
+    return math.ceil(dx / 8) + math.ceil(dy / 8)
 
 def grid_jumper_2D_heuristic(current, destination):
-    return 0
+    dx = abs(current[0] - destination[0])
+    dy = abs(current[1] - destination[1])
+    
+    return max(math.ceil(max(dx, dy) / 3), math.ceil((dx + dy) / 5)) * 1.0001
