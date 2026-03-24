@@ -1,75 +1,61 @@
 {
   "main": {
-    "id": "ad66b2cf04ae0a8f",
+    "id": "6f5f3ea276c1ed02",
     "type": "split",
     "children": [
       {
-<<<<<<< HEAD
-        "id": "135c7b4d808d31e6",
+        "id": "2f5952d836f0eb30",
         "type": "tabs",
         "children": [
           {
-            "id": "ae4a3d057c0349a5",
-=======
-        "id": "16402c22cc9a37af",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "17512df1351854de",
->>>>>>> a6fddf281b139817f5ef9480620f7a5f03785066
+            "id": "1f50abbb0133f526",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-<<<<<<< HEAD
-                "file": "ImageProcessing/Image Processing.md",
-=======
-                "file": "VaP Logika/POJMY KE ZKOUŠce.md",
->>>>>>> a6fddf281b139817f5ef9480620f7a5f03785066
+                "file": "PAST/Pravděpodobnost při hodu dvěma kostkami.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-<<<<<<< HEAD
-              "title": "Image Processing"
+              "title": "Pravděpodobnost při hodu dvěma kostkami"
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "0984f083a30a3165",
+        "type": "tabs",
+        "children": [
           {
-            "id": "d64d163071781923",
+            "id": "b8171343e5cf574b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ImageProcessing/Image Processing absrrakt nebo neco idk dulezite veci..md",
+                "file": "PAST/Pravděpodobnost při hodu dvěma kostkami.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Image Processing absrrakt nebo neco idk dulezite veci."
-            }
-          }
-        ],
-        "currentTab": 1
-=======
-              "title": "POJMY KE ZKOUŠce"
+              "title": "Pravděpodobnost při hodu dvěma kostkami"
             }
           }
         ]
->>>>>>> a6fddf281b139817f5ef9480620f7a5f03785066
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "5d9b6d7a72186d8e",
+    "id": "89c48702158b2d26",
     "type": "split",
     "children": [
       {
-        "id": "41d3d5569416d5dd",
+        "id": "365a0d5319c9b571",
         "type": "tabs",
         "children": [
           {
-            "id": "1211a76986d3969c",
+            "id": "d6c5e6b18c3927a0",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -82,7 +68,7 @@
             }
           },
           {
-            "id": "a4ff47872e7d684e",
+            "id": "acdc6b97337e6dbc",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -99,7 +85,7 @@
             }
           },
           {
-            "id": "9052c17c22386cde",
+            "id": "96d44a72b8c32d11",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -112,22 +98,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 300
   },
   "right": {
-    "id": "df5b57d7b5630b98",
+    "id": "40dda326094b3233",
     "type": "split",
     "children": [
       {
-        "id": "78f6f6cf43c2f577",
+        "id": "10cac55bbe2f32db",
         "type": "tabs",
         "children": [
           {
-            "id": "59b83c41479567c9",
+            "id": "3bb0f8b4c471a9f5",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "PAST/Pravděpodobnost při hodu dvěma kostkami.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,24 +124,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Pravděpodobnost při hodu dvěma kostkami"
             }
           },
           {
-            "id": "f003733b982c8dba",
+            "id": "f113cf43a9338654",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "PAST/Pravděpodobnost při hodu dvěma kostkami.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from Pravděpodobnost při hodu dvěma kostkami"
             }
           },
           {
-            "id": "f077e312f53c4742",
+            "id": "efd941ea8fbc5e0a",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -169,17 +157,18 @@
             }
           },
           {
-            "id": "48c4e95caaf89877",
+            "id": "f41585c20905ac54",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
+                "file": "PAST/Pravděpodobnost při hodu dvěma kostkami.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Pravděpodobnost při hodu dvěma kostkami"
             }
           }
         ]
@@ -200,37 +189,9 @@
       "bases:Create new base": false
     }
   },
-  "active": "17512df1351854de",
+  "active": "1f50abbb0133f526",
   "lastOpenFiles": [
-    "VaP Logika/POJMY KE ZKOUŠce.md",
-    "VaP Logika",
-    "ADS/ADS2 Zkouška.md",
-    "ImageProcessing/Image Processing absrrakt nebo neco idk dulezite veci..md",
-    "ImageProcessing/Image Processing.md",
-    "ADS/Zkouska.md",
-    "ImageProcessing",
-    "ADS/Barveni grafu na SAT.md",
-    "ADS/Je pokryti mnozin NP-uplne.md",
-    "ANALyza/cvika.md",
-    "FormAI dokumentace.md",
-    "FormAI uživatelská dokumentace.md",
-    "Untitled",
-    "ANALyza/FINAL.md",
-    "Untitled 3.canvas",
-    "Untitled 2.canvas",
-    "Untitled 1.canvas",
-    "Untitled.canvas",
-    "Eukleides.md",
-    "Lingebra/Pozitivní definitnost a bilineární formy.md",
-    "Lingebra/Zkouška.md",
-    "Lingebra/Vlastní čísla, vlastní vektory.md",
-    "ANALyza/Ukol 13.md",
-    "ANALyza/ukol 14.md",
-    "ANALyza/Ukol 12.md",
-    "Lingebra/Podobnost a diagonalizace.md",
-    "ANALyza/Ukol 11.md",
-    "ANALyza/Untitled 1.canvas",
-    "ANALyza/Untitled.canvas",
-    "ANALyza/Ukol 10.md"
+    "PAST/Pravděpodobnost při hodu dvěma kostkami.md",
+    "PAST"
   ]
 }
