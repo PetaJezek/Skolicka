@@ -1,6 +1,5 @@
 # Install package python-constraint, not constraint !!!
-import constraint
-
+from constraint import *
 def total_coloring(graph):
     """
         Find total chromatic index and total coloring.
@@ -11,6 +10,9 @@ def total_coloring(graph):
         TODO: The implementation of this function finds some total coloring but the number of colors may not be minimal.
         Find the total chromatic index.
     """
+
+    problem = Problem()
+
     colors = 0
     for u in graph.nodes():
         graph.nodes[u]["color"] = colors

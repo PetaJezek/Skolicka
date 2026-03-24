@@ -43,4 +43,30 @@ def grid_jumper_2D_heuristic(current, destination):
     dx = abs(current[0] - destination[0])
     dy = abs(current[1] - destination[1])
     
-    return max(math.ceil(max(dx, dy) / 3), math.ceil((dx + dy) / 5)) * 1.0001
+    return max(math.ceil(max(dx, dy) / 3), math.ceil((dx + dy) / 5)) 
+
+    # To simplify, ensure dx >= dy
+    if dx < dy:
+        dx, dy = dy, dx
+
+    # Handle trivial and special small cases where the general formula is weak
+    if dx == 0 and dy == 0:
+        return 0
+    if dx == 1 and dy == 0:
+        return 3
+    if dx == 2 and dy == 2:
+        return 4
+    if dx == 1 and dy == 1:
+        return 2
+    if dx == 3 and dy == 3:
+        return 2
+
+    # General lower bounds
+    h = max(math.ceil(dx / 3), math.ceil((dx + dy) / 5))
+
+    # The number of moves k must have the same parity as (dx + dy).
+    # If our heuristic h doesn't, we can improve the lower bound by 1.
+    if (dx + dy) % 2 != h % 2:
+        h += 1
+
+    return h

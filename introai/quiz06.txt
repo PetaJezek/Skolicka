@@ -1,0 +1,31 @@
+NAIL120: Introduction to Artificial Intelligence
+
+Quiz #6. Probabilistic reasoning
+How can we solve problems using search if environment is partially observable?
+
+
+
+What is a belief state?
+How can we do planning, if actions are non-deterministic?
+What is the major disadvantage of logical agent when handling uncertainty?
+What is the relation between event and possible world?
+Why is a random variable?
+When and where can we use normalization?
+What are the disadvantages of using full joint probability distribution?
+How do we calculate probabilities P(P1,3, unknown, known, b) in the full joint probability
+distribution for the Wumpus world? (slide 9)
+What are the only two possible values of probabilities P(b | P1,3,known, fringe) in the
+Wumpus world? Why? (slide 11)
+What is the practical difference between causal and diagnostic direction?
+What is the relation between chain rule and product rule?
+How does a Bayesian network represent full joint probability distribution?
+Why are there arcs MaryCalls -> JohnCalls and Burglary -> Earthquake in the Bayesian
+network at slide 16?
+Can we construct Bayesian network for any order of random variables?
+What is the disadvantage of the enumeration method for inference in Bayesian networks?
+How can we obtain factors from conditional probability tables?
+Apply the variable elimination method to the Bayesian network for burglary case (slide 14)
+to answer query P(Alarm | JohnCalls=yes, MarryCalls=no).
+How can we calculate the area of an irregular 2D object using a Monte Carlo technique?
+What is a sample for a give Bayesian network?
+What is the difference between rejection sampling and likelihood weighting?
