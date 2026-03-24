@@ -1,5 +1,6 @@
 {
   "main": {
+<<<<<<< HEAD
     "id": "6f5f3ea276c1ed02",
     "type": "split",
     "children": [
@@ -9,36 +10,71 @@
         "children": [
           {
             "id": "1f50abbb0133f526",
+=======
+    "id": "f00aaacc67245091",
+    "type": "split",
+    "children": [
+      {
+        "id": "a7e741d32fd61d90",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6c68c0189085dad7",
+>>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
+<<<<<<< HEAD
                 "file": "PAST/Pravděpodobnost při hodu dvěma kostkami.md",
+=======
+                "file": "PAST/Exit Poll.md",
+>>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
+<<<<<<< HEAD
               "title": "Pravděpodobnost při hodu dvěma kostkami"
+=======
+              "title": "Exit Poll"
+>>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
             }
           }
         ]
       },
       {
+<<<<<<< HEAD
         "id": "0984f083a30a3165",
         "type": "tabs",
         "children": [
           {
             "id": "b8171343e5cf574b",
+=======
+        "id": "cf3561d25f1e32c3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7678fce26b3f99c2",
+>>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
+<<<<<<< HEAD
                 "file": "PAST/Pravděpodobnost při hodu dvěma kostkami.md",
+=======
+                "file": "PAST/Exit Poll.md",
+>>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
+<<<<<<< HEAD
               "title": "Pravděpodobnost při hodu dvěma kostkami"
+=======
+              "title": "Exit Poll"
+>>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
             }
           }
         ]
@@ -47,6 +83,7 @@
     "direction": "vertical"
   },
   "left": {
+<<<<<<< HEAD
     "id": "89c48702158b2d26",
     "type": "split",
     "children": [
@@ -56,6 +93,17 @@
         "children": [
           {
             "id": "d6c5e6b18c3927a0",
+=======
+    "id": "5476e759d50620cf",
+    "type": "split",
+    "children": [
+      {
+        "id": "49df9629377ca540",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "642886a5939ba70b",
+>>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -64,11 +112,15 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Průzkumník souborů"
             }
           },
           {
+<<<<<<< HEAD
             "id": "acdc6b97337e6dbc",
+=======
+            "id": "615886026dbfedb9",
+>>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
             "type": "leaf",
             "state": {
               "type": "search",
@@ -81,17 +133,21 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Search"
+              "title": "Hledat"
             }
           },
           {
+<<<<<<< HEAD
             "id": "96d44a72b8c32d11",
+=======
+            "id": "2bbdd1330ed0700e",
+>>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
             "type": "leaf",
             "state": {
               "type": "bookmarks",
               "state": {},
               "icon": "lucide-bookmark",
-              "title": "Bookmarks"
+              "title": "Záložky"
             }
           }
         ]
@@ -101,6 +157,7 @@
     "width": 300
   },
   "right": {
+<<<<<<< HEAD
     "id": "40dda326094b3233",
     "type": "split",
     "children": [
@@ -110,11 +167,26 @@
         "children": [
           {
             "id": "3bb0f8b4c471a9f5",
+=======
+    "id": "80bb2bc06ccf3da1",
+    "type": "split",
+    "children": [
+      {
+        "id": "d8d543cae717f875",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3b89ccfca7359d4f",
+>>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+<<<<<<< HEAD
                 "file": "PAST/Pravděpodobnost při hodu dvěma kostkami.md",
+=======
+                "file": "PAST/Příklad 9 z 2. sady cvičení.md",
+>>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,25 +196,45 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
+<<<<<<< HEAD
               "title": "Backlinks for Pravděpodobnost při hodu dvěma kostkami"
             }
           },
           {
             "id": "f113cf43a9338654",
+=======
+              "title": "Zpětné odkazy pro Příklad 9 z 2. sady cvičení"
+            }
+          },
+          {
+            "id": "57e0cae609b64037",
+>>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+<<<<<<< HEAD
                 "file": "PAST/Pravděpodobnost při hodu dvěma kostkami.md",
+=======
+                "file": "PAST/Příklad 9 z 2. sady cvičení.md",
+>>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
+<<<<<<< HEAD
               "title": "Outgoing links from Pravděpodobnost při hodu dvěma kostkami"
             }
           },
           {
             "id": "efd941ea8fbc5e0a",
+=======
+              "title": "Odchozí odkazy z Příklad 9 z 2. sady cvičení"
+            }
+          },
+          {
+            "id": "fc011dcc15fd0ac5",
+>>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -157,18 +249,30 @@
             }
           },
           {
+<<<<<<< HEAD
             "id": "f41585c20905ac54",
+=======
+            "id": "62b36b069a1002f8",
+>>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
+<<<<<<< HEAD
                 "file": "PAST/Pravděpodobnost při hodu dvěma kostkami.md",
+=======
+                "file": "PAST/Příklad 9 z 2. sady cvičení.md",
+>>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
+<<<<<<< HEAD
               "title": "Outline of Pravděpodobnost při hodu dvěma kostkami"
+=======
+              "title": "Přehled Příklad 9 z 2. sady cvičení"
+>>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
             }
           }
         ]
@@ -180,18 +284,25 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Vytvořit novou základnu": false,
+      "switcher:Otevřít rychlé přepínání": false,
+      "graph:Otevřít graf": false,
+      "canvas:Vytvořit nový canvas": false,
+      "daily-notes:Otevřít dnešní poznámku": false,
+      "templates:Vložit šablonu": false,
+      "command-palette:Otevřít paletu příkazů": false
     }
   },
+<<<<<<< HEAD
   "active": "1f50abbb0133f526",
   "lastOpenFiles": [
     "PAST/Pravděpodobnost při hodu dvěma kostkami.md",
+=======
+  "active": "6c68c0189085dad7",
+  "lastOpenFiles": [
+    "PAST/Příklad 9 z 2. sady cvičení.md",
+    "PAST/Exit Poll.md",
+>>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
     "PAST"
   ]
 }

@@ -1,0 +1,72 @@
+# TODO: Implement more efficient monotonic heuristic
+#
+# Every function receive coordinates of two grid points returns estimated distance between them.
+# Each argument is a tuple of two or three integer coordinates.
+# See file task.md for description of all grids.
+
+import math
+from graphs import Grid2D, GridDiagonal2D, GridGreatKing2D, GridRook2D, GridJumper2D, Grid3D, GridFaceDiagonal3D, GridAllDiagonal3D
+
+# For two points a and b in the n-dimensional space, return the d-dimensional point r such that r_i = | a_i - b_i | for i = 1...d
+def distance_in_each_coordinate(x, y):
+    return [ abs(a-b) for (a,b) in zip(x, y) ]
+
+def grid_2D_heuristic(current, destination):
+    dx, dy = distance_in_each_coordinate(current, destination)
+    return dx + dy
+
+def grid_diagonal_2D_heuristic(current, destination):
+    dx, dy = distance_in_each_coordinate(current, destination)
+    return max(dx, dy)
+
+def grid_3D_heuristic(current, destination):
+    dx, dy, dz = distance_in_each_coordinate(current, destination)
+    return dx + dy + dz
+
+def grid_face_diagonal_3D_heuristic(current, destination):
+    dx, dy, dz = distance_in_each_coordinate(current, destination)
+    return max(max(dx, dy, dz), math.ceil((dx + dy + dz) / 2))
+
+def grid_all_diagonal_3D_heuristic(current, destination):
+    dx, dy, dz = distance_in_each_coordinate(current, destination)
+    return max(dx, dy, dz)
+
+def grid_great_king_2D_heuristic(current, destination): 
+    dx, dy = distance_in_each_coordinate(current, destination)
+    return math.ceil(max(dx, dy) / 8)
+
+def grid_rook_2D_heuristic(current, destination):
+    dx, dy = distance_in_each_coordinate(current, destination)
+    return math.ceil(dx / 8) + math.ceil(dy / 8)
+
+def grid_jumper_2D_heuristic(current, destination):
+    dx = abs(current[0] - destination[0])
+    dy = abs(current[1] - destination[1])
+    
+    return max(math.ceil(max(dx, dy) / 3), math.ceil((dx + dy) / 5)) 
+
+    # To simplify, ensure dx >= dy
+    if dx < dy:
+        dx, dy = dy, dx
+
+    # Handle trivial and special small cases where the general formula is weak
+    if dx == 0 and dy == 0:
+        return 0
+    if dx == 1 and dy == 0:
+        return 3
+    if dx == 2 and dy == 2:
+        return 4
+    if dx == 1 and dy == 1:
+        return 2
+    if dx == 3 and dy == 3:
+        return 2
+
+    # General lower bounds
+    h = max(math.ceil(dx / 3), math.ceil((dx + dy) / 5))
+
+    # The number of moves k must have the same parity as (dx + dy).
+    # If our heuristic h doesn't, we can improve the lower bound by 1.
+    if (dx + dy) % 2 != h % 2:
+        h += 1
+
+    return h
