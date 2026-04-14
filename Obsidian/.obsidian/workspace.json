@@ -1,80 +1,46 @@
 {
   "main": {
-<<<<<<< HEAD
-    "id": "6f5f3ea276c1ed02",
+    "id": "21274739455d2977",
     "type": "split",
     "children": [
       {
-        "id": "2f5952d836f0eb30",
+        "id": "6102ef3c3eb5bbe3",
         "type": "tabs",
+        "dimension": 63.76903553299492,
         "children": [
           {
-            "id": "1f50abbb0133f526",
-=======
-    "id": "f00aaacc67245091",
-    "type": "split",
-    "children": [
-      {
-        "id": "a7e741d32fd61d90",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "6c68c0189085dad7",
->>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
+            "id": "c01c834b93d59597",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-<<<<<<< HEAD
-                "file": "PAST/Pravděpodobnost při hodu dvěma kostkami.md",
-=======
-                "file": "PAST/Exit Poll.md",
->>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
+                "file": "PAST/Hazeni na terč.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-<<<<<<< HEAD
-              "title": "Pravděpodobnost při hodu dvěma kostkami"
-=======
-              "title": "Exit Poll"
->>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
+              "title": "Hazeni na terč"
             }
           }
         ]
       },
       {
-<<<<<<< HEAD
-        "id": "0984f083a30a3165",
+        "id": "2c9d2f9b11cb58ee",
         "type": "tabs",
+        "dimension": 36.23096446700508,
         "children": [
           {
-            "id": "b8171343e5cf574b",
-=======
-        "id": "cf3561d25f1e32c3",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "7678fce26b3f99c2",
->>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
+            "id": "2a7384a5b4cf56b0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-<<<<<<< HEAD
-                "file": "PAST/Pravděpodobnost při hodu dvěma kostkami.md",
-=======
-                "file": "PAST/Exit Poll.md",
->>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
+                "file": "PAST/Hazeni na terč.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-<<<<<<< HEAD
-              "title": "Pravděpodobnost při hodu dvěma kostkami"
-=======
-              "title": "Exit Poll"
->>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
+              "title": "Hazeni na terč"
             }
           }
         ]
@@ -83,27 +49,15 @@
     "direction": "vertical"
   },
   "left": {
-<<<<<<< HEAD
-    "id": "89c48702158b2d26",
+    "id": "ecad9df153b4b1c3",
     "type": "split",
     "children": [
       {
-        "id": "365a0d5319c9b571",
+        "id": "c5dc5c94a59a3cba",
         "type": "tabs",
         "children": [
           {
-            "id": "d6c5e6b18c3927a0",
-=======
-    "id": "5476e759d50620cf",
-    "type": "split",
-    "children": [
-      {
-        "id": "49df9629377ca540",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "642886a5939ba70b",
->>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
+            "id": "46c4ab543c126110",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -116,11 +70,7 @@
             }
           },
           {
-<<<<<<< HEAD
-            "id": "acdc6b97337e6dbc",
-=======
-            "id": "615886026dbfedb9",
->>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
+            "id": "48f9ff6365b82674",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -137,11 +87,7 @@
             }
           },
           {
-<<<<<<< HEAD
-            "id": "96d44a72b8c32d11",
-=======
-            "id": "2bbdd1330ed0700e",
->>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
+            "id": "6ed5e7d61995c771",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -157,36 +103,20 @@
     "width": 300
   },
   "right": {
-<<<<<<< HEAD
-    "id": "40dda326094b3233",
+    "id": "68bd832b682dc5e9",
     "type": "split",
     "children": [
       {
-        "id": "10cac55bbe2f32db",
+        "id": "1e2be3f7d2d51e59",
         "type": "tabs",
         "children": [
           {
-            "id": "3bb0f8b4c471a9f5",
-=======
-    "id": "80bb2bc06ccf3da1",
-    "type": "split",
-    "children": [
-      {
-        "id": "d8d543cae717f875",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "3b89ccfca7359d4f",
->>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
+            "id": "de06a3684f0bfe57",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-<<<<<<< HEAD
-                "file": "PAST/Pravděpodobnost při hodu dvěma kostkami.md",
-=======
-                "file": "PAST/Příklad 9 z 2. sady cvičení.md",
->>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
+                "file": "PAST/Hazeni na terč.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -196,45 +126,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-<<<<<<< HEAD
-              "title": "Backlinks for Pravděpodobnost při hodu dvěma kostkami"
+              "title": "Zpětné odkazy pro Hazeni na terč"
             }
           },
           {
-            "id": "f113cf43a9338654",
-=======
-              "title": "Zpětné odkazy pro Příklad 9 z 2. sady cvičení"
-            }
-          },
-          {
-            "id": "57e0cae609b64037",
->>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
+            "id": "3317c85cc94a5716",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-<<<<<<< HEAD
-                "file": "PAST/Pravděpodobnost při hodu dvěma kostkami.md",
-=======
-                "file": "PAST/Příklad 9 z 2. sady cvičení.md",
->>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
+                "file": "PAST/Hazeni na terč.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-<<<<<<< HEAD
-              "title": "Outgoing links from Pravděpodobnost při hodu dvěma kostkami"
+              "title": "Odchozí odkazy z Hazeni na terč"
             }
           },
           {
-            "id": "efd941ea8fbc5e0a",
-=======
-              "title": "Odchozí odkazy z Příklad 9 z 2. sady cvičení"
-            }
-          },
-          {
-            "id": "fc011dcc15fd0ac5",
->>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
+            "id": "3452335bccad9511",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -245,34 +155,22 @@
                 "searchQuery": ""
               },
               "icon": "lucide-tags",
-              "title": "Tags"
+              "title": "Štítky"
             }
           },
           {
-<<<<<<< HEAD
-            "id": "f41585c20905ac54",
-=======
-            "id": "62b36b069a1002f8",
->>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
+            "id": "78e8fbe371a68051",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-<<<<<<< HEAD
-                "file": "PAST/Pravděpodobnost při hodu dvěma kostkami.md",
-=======
-                "file": "PAST/Příklad 9 z 2. sady cvičení.md",
->>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
+                "file": "PAST/Hazeni na terč.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-<<<<<<< HEAD
-              "title": "Outline of Pravděpodobnost při hodu dvěma kostkami"
-=======
-              "title": "Přehled Příklad 9 z 2. sady cvičení"
->>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
+              "title": "Přehled Hazeni na terč"
             }
           }
         ]
@@ -284,25 +182,17 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:Vytvořit novou základnu": false,
       "switcher:Otevřít rychlé přepínání": false,
       "graph:Otevřít graf": false,
       "canvas:Vytvořit nový canvas": false,
       "daily-notes:Otevřít dnešní poznámku": false,
       "templates:Vložit šablonu": false,
-      "command-palette:Otevřít paletu příkazů": false
+      "command-palette:Otevřít paletu příkazů": false,
+      "bases:Vytvořit novou základnu": false
     }
   },
-<<<<<<< HEAD
-  "active": "1f50abbb0133f526",
+  "active": "2a7384a5b4cf56b0",
   "lastOpenFiles": [
-    "PAST/Pravděpodobnost při hodu dvěma kostkami.md",
-=======
-  "active": "6c68c0189085dad7",
-  "lastOpenFiles": [
-    "PAST/Příklad 9 z 2. sady cvičení.md",
-    "PAST/Exit Poll.md",
->>>>>>> 3b471557cf0582e8fec2a0c24d437119d46d7266
-    "PAST"
+    "PAST/Hazeni na terč.md"
   ]
 }
