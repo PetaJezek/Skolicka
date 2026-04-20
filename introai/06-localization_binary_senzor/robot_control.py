@@ -25,20 +25,71 @@ class RobotControl:
         # Step counter 
         self.remaining_steps = self.total_steps = environment.steps
 
-        # The probability distribution of landing on each cell
-        self.position_dist = numpy.full((self.rows, self.columns), 1/(self.rows * self.columns))
-
+        total_valid_cells = (self.rows * self.columns) - 1
+        self.position_dist = numpy.full((self.rows, self.columns), 1 / total_valid_cells)
+        # Station has 0.0 probability of being the landing site
+        dest_r, dest_c = self.destination
+        self.position_dist[dest_r][dest_c] = 0.0
         # This is needed only for a trivial control
+        self.graph = networkx.grid_2d_graph(self.rows, self.columns)
+
+        self.paths = networkx.single_target_shortest_path(self.graph, self.destination)
+
         self.spiral_direction = self.env.NORTH
         self.spiral_remains = self.spiral_steps = 1
 
         self.grayscale_complement = 1 - environment.grayscale
 
-    # Returns command for movement.
-    # sensor_reading - True if the robot's sensor reads black on the current position
     def get_command(self, sensor_reading):
         self.remaining_steps -= 1
-        return self.get_command_using_spiral()
+        
+        # Aplikuj data ze senzoru a znormalizuj
+        self.update_position_by_sensor_reading(sensor_reading)
+        self.normalize_position_distribution()
+        
+        # Odhad polohy
+        best_r, best_c = numpy.unravel_index(numpy.argmax(self.position_dist), self.position_dist.shape)
+        max_prob = self.position_dist[best_r][best_c]
+        
+        # Analýza situace s využitím NetworkX
+        path_to_goal = self.paths.get((best_r, best_c))
+        steps_to_goal = len(path_to_goal) - 1 if path_to_goal else 0
+        
+        fall_risks = self.get_probabilities_fall()
+        
+        # ROZHODOVACÍ LOGIKA (State Machine)
+        if steps_to_goal - 5 >= self.remaining_steps - 2:
+            mode = "EXPLOIT"
+        elif max_prob < 0.60:
+            mode = "EXPLORE"
+        else:
+            mode = "EXPLOIT"
+
+        # PROVEDENÍ AKCE
+        chosen_command = None
+        
+        if mode == "EXPLOIT" and steps_to_goal > 0:
+            next_node = path_to_goal[1]
+            if next_node[0] < best_r: chosen_command = self.env.NORTH
+            elif next_node[0] > best_r: chosen_command = self.env.SOUTH
+            elif next_node[1] < best_c: chosen_command = self.env.WEST
+            else: chosen_command = self.env.EAST
+         
+            if fall_risks[chosen_command] > 0.35 and steps_to_goal < self.remaining_steps - 2:
+                mode = "EXPLORE"
+                
+        if mode == "EXPLORE" or chosen_command is None:
+            spiral_cmd = self.get_command_using_spiral()
+            
+            # Pokud je spirála bezpečná, uděláme ji. Jinak vybereme absolutně nejbezpečnější krok.
+            if fall_risks[spiral_cmd] < 0.35:
+                chosen_command = spiral_cmd
+            else:
+                chosen_command = numpy.argmin(fall_risks) # Zvol směr s nejmenším rizikem pádu
+
+        # Zápis do vnitřní mapy a odeslání příkazu
+        self.update_position_by_command(chosen_command)
+        return chosen_command
         
     # This is a trivial control in which the robot moves on a spiral.
     # Only for illustrative purposes.
@@ -50,6 +101,55 @@ class RobotControl:
             self.spiral_remains = self.spiral_steps
         self.spiral_remains -= 1
         return self.spiral_direction
+    
+    def update_position_by_sensor_reading(self, sensor_reading):
+        if sensor_reading:
+            self.position_dist *= self.grayscale
+        else:
+            self.position_dist *= self.grayscale_complement
+
+    def update_position_by_command(self, command):
+        new_position_dist = numpy.zeros((self.rows, self.columns))
+        for i in range(self.rows):
+            for j in range(self.columns):
+                if self.position_dist[i][j] > 0:
+                    new_i, new_j = i, j
+                    if command == self.env.NORTH:
+                        new_i -= 1
+                    elif command == self.env.EAST:
+                        new_j += 1
+                    elif command == self.env.SOUTH:
+                        new_i += 1
+                    elif command == self.env.WEST:
+                        new_j -= 1
+                    if 0 <= new_i < self.rows and 0 <= new_j < self.columns:
+                        new_position_dist[new_i][new_j] += self.position_dist[i][j]
+        self.position_dist = new_position_dist
+
+        dest_r, dest_c = self.destination
+        self.position_dist[dest_r][dest_c] = 0.0
+
+
+    def normalize_position_distribution(self):
+        # Normalize the probability distribution of robot's position so that the sum of all probabilities is 1.
+        total = self.position_dist.sum()
+        if total > 0 and total != 1:
+            self.position_dist /= total
+    
+    def get_probabilities_fall(self):
+        fall = [0]*4
+        for i in range(self.rows):
+            for j in range(self.columns):
+                if self.position_dist[i][j] > 0:
+                    if i == 0:
+                        fall[self.env.NORTH] += self.position_dist[i][j]
+                    if j == self.columns - 1:
+                        fall[self.env.EAST] += self.position_dist[i][j]
+                    if i == self.rows - 1:
+                        fall[self.env.SOUTH] += self.position_dist[i][j]
+                    if j == 0:
+                        fall[self.env.WEST] += self.position_dist[i][j]
+        return fall
 
     # Calculate the probability distribution of robot's position after k steps
     # sensor_readings - a binary array of k+1 sensor readings

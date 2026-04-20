@@ -106,8 +106,6 @@ def ant_solver(vertices, distance_function, capacity, depot_idx=0, number_of_ant
         
     return best_solution, pheromones, log_of_best_distances
 
-
-
 def parse_xml_to_vertices(xml_file_path):
     tree = ET.parse(xml_file_path)
     root = tree.getroot()
@@ -138,7 +136,7 @@ def parse_xml_to_vertices(xml_file_path):
 # --- SPUŠTĚNÍ ---
 if __name__ == "__main__":
 
-    XML_FILENAME = "data_422.xml" 
+    XML_FILENAME = "data_72.xml" 
 
     vertices, vehicle_capacity, depot_index = parse_xml_to_vertices(XML_FILENAME)
 
@@ -150,10 +148,10 @@ if __name__ == "__main__":
         distance_function, 
         capacity=vehicle_capacity, 
         depot_idx=depot_index,
-        number_of_ants=15, 
+        number_of_ants=50, 
         max_iterations=100, 
         alpha=1.0, 
-        beta=3.0, 
+        beta=2.0, 
         Q=100,
         rho=0.6
     )
