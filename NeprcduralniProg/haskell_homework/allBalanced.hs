@@ -16,8 +16,8 @@ allPossibleTrees (low, high)
 
 balanced :: Tree -> Bool
 balanced Nil = True
-balanced (Node left x right) = balanced left && balanced right && abs (height left - height right) <= 1
+balanced (Node left x right) = balanced left && balanced right && abs (count left - count right) <= 1
 
-height :: Tree -> Int
-height Nil = 0
-height (Node left x right) = 1 + max (height left) (height right)
+count :: Tree -> Int
+count Nil = 0
+count (Node left x right) = 1 + count left + count right
