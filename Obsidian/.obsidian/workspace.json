@@ -4,30 +4,8 @@
     "type": "split",
     "children": [
       {
-        "id": "6102ef3c3eb5bbe3",
-        "type": "tabs",
-        "dimension": 63.76903553299492,
-        "children": [
-          {
-            "id": "c01c834b93d59597",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PAST/Hazeni na terč.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Hazeni na terč"
-            }
-          }
-        ]
-      },
-      {
         "id": "2c9d2f9b11cb58ee",
         "type": "tabs",
-        "dimension": 36.23096446700508,
         "children": [
           {
             "id": "2a7384a5b4cf56b0",
@@ -35,12 +13,32 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PAST/Hazeni na terč.md",
+                "file": "PAST/Estimator falesne mince.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Estimator falesne mince"
+            }
+          }
+        ]
+      },
+      {
+        "id": "f7d97f1f8b0fa47f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0d7eafbda08786d7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "PAST/Estimator falesne mince.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Hazeni na terč"
+              "title": "Estimator falesne mince"
             }
           }
         ]
@@ -193,6 +191,7 @@
   },
   "active": "2a7384a5b4cf56b0",
   "lastOpenFiles": [
-    "PAST/Hazeni na terč.md"
+    "PAST/Hazeni na terč.md",
+    "PAST/Estimator falesne mince.md"
   ]
 }

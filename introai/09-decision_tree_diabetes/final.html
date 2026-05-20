@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Predikce diabetu — Zpráva o rozhodovacím stromu</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+    :root {
+      --bg: #faf8f5;
+      --ink: #1a1614;
+      --muted: #6b6560;
+      --accent: #c0392b;
+      --accent-light: #f9e8e6;
+      --border: #e2ddd8;
+      --paper: #ffffff;
+      --code-bg: #f4f1ec;
+      --blue: #2d6a9f;
+      --blue-light: #e8f0f8;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .page {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 56px 64px;
+    }
+
+    .report-header {
+      border-bottom: 2px solid var(--ink);
+      padding-bottom: 28px;
+      margin-bottom: 52px;
+    }
+
+    .report-header h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 38px;
+      font-weight: 400;
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+
+    .report-header h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .report-header .subtitle {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    section { margin-bottom: 56px; }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 18px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      flex-shrink: 0;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 24px;
+      font-weight: 400;
+    }
+
+    p { margin-bottom: 12px; font-weight: 300; color: #2c2826; }
+
+    .param-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 4px 0 16px;
+      font-size: 13px;
+    }
+
+    .param-table thead tr { background: var(--ink); color: var(--bg); }
+
+    .param-table thead th {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 9px 14px;
+      text-align: left;
+      font-weight: 500;
+    }
+
+    .param-table tbody tr { border-bottom: 1px solid var(--border); }
+    .param-table tbody tr:nth-child(even) { background: var(--code-bg); }
+    .param-table tbody td { padding: 9px 14px; vertical-align: top; }
+
+    .param-table code {
+      font-family: 'DM Mono', monospace;
+      font-size: 11.5px;
+      background: var(--code-bg);
+      padding: 1px 5px;
+      border-radius: 3px;
+      border: 1px solid var(--border);
+    }
+
+    .impact {
+      display: inline-block;
+      font-family: 'DM Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 3px 7px;
+      border-radius: 3px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .impact.high   { background: var(--accent-light); color: var(--accent); }
+    .impact.medium { background: #fff8e0; color: #8a6d00; }
+    .impact.low    { background: var(--code-bg); color: var(--muted); border: 1px solid var(--border); }
+
+    .results-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .stat {
+      background: var(--ink);
+      color: var(--bg);
+      border-radius: 6px;
+      padding: 18px 16px;
+      text-align: center;
+    }
+
+    .stat-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #a09890;
+      margin-bottom: 6px;
+    }
+
+    .stat-value { font-family: 'DM Serif Display', serif; font-size: 26px; }
+    .stat.gold .stat-value { color: #f5a623; }
+
+    pre {
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 18px 20px;
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      line-height: 1.65;
+      margin: 14px 0;
+    }
+
+    .figure { margin: 20px 0; page-break-inside: avoid; }
+
+    .figure img {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      display: block;
+    }
+
+    .figure-caption {
+      font-family: 'DM Mono', monospace;
+      font-size: 10.5px;
+      color: var(--muted);
+      margin-top: 8px;
+      text-align: center;
+      letter-spacing: 0.04em;
+    }
+
+    .two-figs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .note {
+      background: var(--blue-light);
+      border-left: 3px solid var(--blue);
+      border-radius: 0 5px 5px 0;
+      padding: 13px 18px;
+      margin: 16px 0;
+      font-size: 13px;
+    }
+
+    .note strong {
+      display: block;
+      font-family: 'DM Mono', monospace;
+      font-size: 9.5px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 5px;
+    }
+
+    @media print {
+      body { background: white; }
+      .page { padding: 32px 44px; }
+      section { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <div class="report-header">
+    <h1>Predikce diabetu — <em>Rozhodovací strom</em></h1>
+    <div class="subtitle">Petr Ježek · 2026 · INTRO do AI</div>
+  </div>
+
+  <section>
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2>Vliv parametrů na přesnost</h2>
+    </div>
+
+    <p>Byly testovány různé kombinace hyperparametrů za účelem pochopení jejich vlivu na přesnost. Uvedená tabulka shrnuje zjištění od nejvíce ovlivňujících po nejméně ovlivňující.</p>
+
+    <table class="param-table">
+      <thead>
+        <tr>
+          <th>Parametr</th>
+          <th>Použitá hodnota</th>
+          <th>Vliv</th>
+          <th>Pozorovaný efekt</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>max_depth</code></td>
+          <td><code>5</code></td>
+          <td><span class="impact high">Vysoký</span></td>
+          <td>Nejvýznamnější parametr. Bez omezení dochází k přeučení (overfittingu) stromu — dosahuje ~100% přesnosti na trénovacích datech, ale pouze ~68 % na testovacích datech.</td>
+        </tr>
+        <tr>
+          <td><code>max_leaf_nodes</code></td>
+          <td><code>30</code></td>
+          <td><span class="impact high">Vysoký</span></td>
+          <td>Omezuje celkový počet listů, čímž strom prořezává (pruning) upřednostňováním nejčistších dělení. Společně s <code>max_depth</code> měly tyto dva parametry největší vliv na schopnost modelu generalizovat.</td>
+        </tr>
+        <tr>
+          <td><code>min_samples_split</code></td>
+          <td><code>7</code></td>
+          <td><span class="impact high">Vysoký</span></td>
+          <td>Požadavek na alespoň 7 vzorků před rozdělením uzlu zabránil stromu v "učení se" šumu. Hodnoty nad 10 způsobily nedoučení, takže rozmezí 5–10 přineslo nejlepší výsledky.</td>
+        </tr>
+        <tr>
+          <td><code>criterion</code></td>
+          <td><code>entropy</code></td>
+          <td><span class="impact medium">Střední</span></td>
+          <td>Přechod z výchozí hodnoty <code>gini</code> na entropii zlepšil přesnost zhruba o 0.5–1.0%.</td>
+        </tr>
+        <tr>
+          <td><code>min_samples_leaf</code></td>
+          <td><code>7</code></td>
+          <td><span class="impact low">Nízký</span></td>
+          <td>Sám o sobě přesnost nijak znatelně nezměnil. Jeho hlavním efektem bylo vyhlazení grafu stromu, který se stal čitelnějším díky eliminaci nadbytečných listů.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2>Přesnost a preciznost vs. velikost trénovací sady</h2>
+    </div>
+
+    <p>Model byl trénován na všech 15 poměrech rozdělení trénovacích a testovacích dat (1/16 až 15/16). Byly vytvořeny dvě varianty: bez fixního náhodného seedu a s <code>random_state=42</code>. Zlat7 bod označuje nejlepší přesnost v daném běhu.</p>
+
+    <div class="two-figs">
+      <div class="figure">
+        <img src="accuracy_precision_vs_train_size1.png" alt="Přesnost a preciznost vs velikost trénovací sady (bez random_state)">
+        <div class="figure-caption">Bez fixního random_state</div>
+      </div>
+      <div class="figure">
+        <img src="accuracy_precision_vs_train_size.png" alt="Přesnost a preciznost vs velikost trénovací sady (random_state=42)">
+        <div class="figure-caption">S random_state=42</div>
+      </div>
+    </div>
+
+    <div class="note">
+      <strong>Pozorování</strong>
+      Oba grafy vykazují podobný trend: přesnost vrcholí kolem velikosti trénovací sady ≈ 0,75–0,85 a poté klesá, protože menší počet testovacích vzorků činí vyhodnocení méně spolehlivým. Preciznost vykazuje mnohem větší rozptyl u malých trénovacích sad, kde modelu chybí dostatek pozitivních příkladů k tomu, aby spolehlivě "porozuměl" datům.
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2>Nejlepší konfigurace a výsledky</h2>
+    </div>
+
+    <p>Bylo využito všech 8 příznaků. Napříč všemi natrénovanými stromy se <strong>glukóza</strong> pokaždé objevuje jako kořenový uzel. <strong>BMI</strong> a <strong>věk </strong> jsou také důležité a konzistentně se objevují ve druhé a třetí úrovni. Příznaky <strong>pedigree</strong> a <strong>počet těhotenství </strong> přispívají v hlubších větvích. <strong>Inzulin</strong>, <strong>tloušťka kůže</strong> a <strong>krevní tlak</strong> mají nejmenší vliv.</p>
+
+    <pre>DecisionTreeClassifier(
+    criterion         = 'entropy',
+    max_depth         = 5,
+    max_leaf_nodes    = 30,
+    min_samples_split = 7,
+    min_samples_leaf  = 7,
+)
+
+train_size ≈ 0.80  (nejvýkonnější oblast)</pre>
+
+    <div class="results-row">
+      <div class="stat gold">
+        <div class="stat-label">Přesnost</div>
+        <div class="stat-value">≈78 %</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Preciznost</div>
+        <div class="stat-value">≈73 %</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Senzitivita</div>
+        <div class="stat-value">≈61 %</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Velikost trén. sady</div>
+        <div class="stat-value">≈80%</div>
+      </div>
+    </div>
+
+    <p>Při výběru nejlepšího modelu nebyl použit žádný fixní <code>random_state</code>. Při ověření mnoha opakovanými běhy se přesnost konzistentně pohybuje v rozmezí <strong>74–78 %</strong> — výsledky jsou statisticky signifikantní.</p>
+  </section>
+
+  <section>
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <h2>Vizualizace rozhodovacího stromu</h2>
+    </div>
+
+    <p>Oranžové uzly predikují <em>Bez diabetu </em>, modré uzly predikují <em>Diabetes</em>. Intenzita barvy odráží čistotu uzlu.</p>
+
+    <div class="figure">
+      <img src="decision_tree_best1.png" alt="Nejlepší rozhodovací strom (bez fixního random state)">
+      <div class="figure-caption">Obr. A — Nejlepší strom (bez fixního random_state) · Kořen: glucose ≤ 127,5 · hloubka 5 · 30 listů</div>
+    </div>
+
+    <div class="figure">
+      <img src="decision_tree_best.png" alt="Nejlepší rozhodovací strom (random_state=42)">
+      <div class="figure-caption">Obr. B — Nejlepší strom (random_state=42) · Kořen: glucose ≤ 154,5 · hloubka 5 · 30 listů</div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
