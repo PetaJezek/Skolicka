@@ -4,44 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "2c9d2f9b11cb58ee",
+        "id": "8b7b547a11ce336a",
         "type": "tabs",
         "children": [
           {
-            "id": "2a7384a5b4cf56b0",
+            "id": "b58e645cd30f710d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PAST/Estimator falesne mince.md",
+                "file": "PAST/Test střední hodnoty plnicí linky.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Estimator falesne mince"
+              "title": "Test střední hodnoty plnicí linky"
             }
-          }
-        ]
-      },
-      {
-        "id": "f7d97f1f8b0fa47f",
-        "type": "tabs",
-        "children": [
+          },
           {
-            "id": "0d7eafbda08786d7",
+            "id": "c82e9bb6776412ac",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PAST/Estimator falesne mince.md",
+                "file": "Priroda.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Estimator falesne mince"
+              "title": "Priroda"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -189,9 +184,13 @@
       "bases:Vytvořit novou základnu": false
     }
   },
-  "active": "2a7384a5b4cf56b0",
+  "active": "c82e9bb6776412ac",
   "lastOpenFiles": [
-    "PAST/Hazeni na terč.md",
-    "PAST/Estimator falesne mince.md"
+    "PAST/Test střední hodnoty plnicí linky.md",
+    "Priroda.md",
+    "VaP Logika/Otazky.md",
+    "PAST/Estimator falesne mince.md",
+    "Bez názvu",
+    "PAST/Hazeni na terč.md"
   ]
 }
