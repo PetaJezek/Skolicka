@@ -63,4 +63,3 @@ neohrozujiSe positions =
     in
         null badPositions
         
-
