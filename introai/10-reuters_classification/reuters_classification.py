@@ -26,7 +26,7 @@ def create_testing_data():
     return (train, one_hot_train_labels, test, one_hot_test_labels)
 
 def vectorize_sequences(sequences, dimension=10000):
-    results = np.zeros((len(sequences), dimension))
+    results = np.zeros((len(sequences), dimension), dtype=np.float32)
     for i, sequence in enumerate(sequences):
         results[i, sequence] = 1.
     return results
@@ -51,8 +51,8 @@ def create_and_train_network(input):
 
     # specify the shape of the network
     model = models.Sequential()
-    model.add(layers.Dense(64, activation='relu', input_shape=(10000,)))
-    model.add(layers.Dense(64, activation='relu'))
+    model.add(layers.Dense(500, activation='relu', input_shape=(10000,)))
+    model.add(layers.Dense(500, activation='relu'))
     model.add(layers.Dense(46, activation='softmax'))
 
     model.compile(optimizer='rmsprop',
@@ -74,8 +74,50 @@ def create_and_train_network(input):
                         validation_data=(val_data, val_labels))
     
     return (history,model)
+ #========================================================================================================#
+
+    #TASK 2. What happens if you use significantly fewer neurons than the output size? 
+
+    # If we use significatnly fewer neruons (I tried 5), the training and validation simutaneously drop down. 
+    # It is because the network has only five dimensions to represent all the 46 different labels, which is impossible. 
+
+    # I also tried setting the number of hidden neurons to 1000, and the training accuracy increased.
+    #  However, the validation accuracy stayed stagnant after like 7 epochs.
+    # It is because the network has too much capacity and it overfits the training data (with its noise), which is not good for generalization e. g. validation/testing results plummet.
+    #========================================================================================================#
 
 
+
+
+def categorize_testing_set(model, input):
+    """
+    Use the trained model to categorize the testing set and compare the results with the expected categories
+    """
+    (_,_,test,test_labels) = input
+
+    results = model.predict(test)
+
+    # results is a vector of probabilities, we need to find the index of the highest probability to get the category
+    predicted_labels = np.argmax(results, axis=1)
+    expected_labels = np.argmax(test_labels, axis=1)
+
+
+    wrong = 0
+
+    for i in range(len(predicted_labels)):
+        if predicted_labels[i] != expected_labels[i]:
+            wrong += 1
+    
+    print("Number of wrong predictions: " + str(wrong) + " out of " + str(len(predicted_labels)) + " predictions")
+    
+    #========================================================================================================#
+
+    #TASK 1. Are the results on the testing set more comparable to the training set or the validation set?
+
+    # The testing set results are way more comparable to the validation set results. 
+    # I think it's because the model has seen the training set but has not seen the testing/validation sets. 
+  
+    #========================================================================================================#
 
 def print_graphs(history):
     """
@@ -114,11 +156,19 @@ def print_graphs(history):
 
 
 if __name__ == "__main__":
-    # prepare data
     input = create_testing_data()
+    (history, model) = create_and_train_network(input)
 
-    # create and train the neural network
-    (history,model) = create_and_train_network(input)
+    (_, _, test, test_labels) = input
+    test_loss, test_acc = model.evaluate(test, test_labels)
 
-    # show the results
+    print(f"Final training accuracy:   {history.history['accuracy'][-1]:.4f}")
+    print(f"Final validation accuracy: {history.history['val_accuracy'][-1]:.4f}")
+    print(f"Test accuracy:             {test_acc:.4f}")
+
+    print(f"Final training loss:   {history.history['loss'][-1]:.4f}")
+    print(f"Final validation loss: {history.history['val_loss'][-1]:.4f}")
+    print(f"Test loss:             {test_loss:.4f}")
+
     print_graphs(history)
+    categorize_testing_set(model, input)
