@@ -1,0 +1,3 @@
+[submodule "Strojovka"]
+	url = https://github.com/ufal/npfl129.git
+	path = Strojovka
